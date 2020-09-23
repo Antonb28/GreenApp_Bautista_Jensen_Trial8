@@ -60,6 +60,8 @@ public class Transportation {
     @FXML
     Button F4;
 
+    public int Sched;
+
     @FXML
     private void DtoA() throws IOException {
         Time1.setText("1:00 pm");
@@ -80,9 +82,11 @@ public class Transportation {
         else{
             if(Time1.isSelected()){
                 rTime.setText("1:00pm");
+                Sched = 1;
             }
             else if (Time2.isSelected()){
                 rTime.setText("5:00pm");
+                Sched = 2;
             }
         }
     }
