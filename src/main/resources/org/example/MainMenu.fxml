@@ -87,7 +87,7 @@
             </font>
         </Label>
         <Button fx:id="OrderFood" layoutX="315.0" layoutY="413.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="66.0" text="Select" />
-        <Button fx:id="BusReservation" layoutX="496.0" layoutY="413.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="66.0" text="Select" />
+        <Button fx:id="BusReservation" layoutX="496.0" layoutY="413.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="66.0" text="Select" onAction="#Transportation"/>
         <Button fx:id="Bookstore" layoutX="671.0" layoutY="413.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="66.0" text="Select" />
     </children>
 </Pane>

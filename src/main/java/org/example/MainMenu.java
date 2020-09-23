@@ -27,4 +27,9 @@ public class MainMenu {
         App.setRoot("Transportation");
     }
 
+    @FXML
+    private void Back() throws IOException{
+        App.setRoot("MainMenu");
+    }
+
 }

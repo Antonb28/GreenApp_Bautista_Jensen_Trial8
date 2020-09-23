@@ -42,7 +42,7 @@
                 <Font name="Arial Bold" size="19.0" />
             </font>
         </Label>
-      <Button layoutX="-3.0" layoutY="190.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="244.0" text="Back to Main Menu" />
+      <Button fx:id="back" layoutX="-3.0" layoutY="190.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="244.0" text="Back to Main Menu" onAction="#Back" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="103.0" layoutX="274.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="506.0" />
       <Label layoutX="276.0" layoutY="317.0" prefHeight="22.0" prefWidth="506.0" text="P2P Bus Reservation" textFill="WHITE">
          <font>
