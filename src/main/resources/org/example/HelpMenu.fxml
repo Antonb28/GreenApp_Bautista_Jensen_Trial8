@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MainMenu">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a3a1" height="9.0" layoutX="-15.0" layoutY="385.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="272.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a3a1" height="8.0" layoutX="-39.0" layoutY="314.0" stroke="#47943f" strokeType="INSIDE" strokeWidth="0.0" width="296.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a3a1" height="8.0" layoutX="-16.0" layoutY="234.0" stroke="#47943f" strokeType="INSIDE" strokeWidth="0.0" width="277.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a3a1" height="8.0" layoutX="-6.0" layoutY="160.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="256.0" />
+        <Label layoutX="24.0" layoutY="24.0" prefHeight="51.0" prefWidth="206.0" text="The Green" textFill="#66ae54">
+            <font>
+                <Font name="Arial Bold" size="40.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66ae54" height="47.0" layoutX="29.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="191.0" />
+        <Label layoutX="86.0" layoutY="73.0" prefHeight="51.0" prefWidth="80.0" text="App" textFill="#eeeeee">
+            <font>
+                <Font name="Arial Bold" size="40.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#47943f" height="531.0" layoutX="242.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="571.0" />
+        <Label fx:id="GreetingPrompt" layoutX="276.0" layoutY="14.0" prefHeight="27.0" prefWidth="506.0" text="Help Menu" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="46.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="11.0" layoutX="276.0" layoutY="70.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="506.0" />
+        <Label fx:id="LogInPrompt" alignment="CENTER" layoutX="245.0" layoutY="308.0" prefHeight="20.0" prefWidth="567.0" text=" " textFill="#ffa6a6">
+            <font>
+                <Font name="Arial Bold" size="16.0" />
+            </font>
+        </Label>
+        <Button fx:id="Details" layoutY="265.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="241.0" text="User Details" />
+        <Button fx:id="LogOut" layoutY="340.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="27.0" prefWidth="241.0" text="Log Out" />
+        <Label layoutX="279.0" layoutY="206.0" prefHeight="22.0" prefWidth="506.0" text="Ordering Food" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="19.0" />
+            </font>
+        </Label>
+      <Button layoutX="-3.0" layoutY="190.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="244.0" text="Back to Main Menu" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="103.0" layoutX="274.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="506.0" />
+      <Label layoutX="276.0" layoutY="317.0" prefHeight="22.0" prefWidth="506.0" text="P2P Bus Reservation" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="274.0" layoutY="412.0" prefHeight="22.0" prefWidth="506.0" text="Printing Services" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>
