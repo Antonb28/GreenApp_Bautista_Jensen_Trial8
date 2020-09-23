@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 
 import java.io.IOException;
 
@@ -26,6 +27,8 @@ public class Transportation {
     Label rNumber;
     @FXML
     Label Seat;
+    @FXML
+    Label tp;
     @FXML
     Label SeatStat;
     @FXML
@@ -59,10 +62,41 @@ public class Transportation {
 
     @FXML
     private void DtoA() throws IOException {
-        Time1.setText("Hello1");
-        Time2.setText("Hello3");
+        Time1.setText("1:00 pm");
+        Time2.setText("5:30 pm");
         rRoute.setText("DLSU-ATC");
+        tp.setText(" ");
     }
 
+    @FXML
+    private void selectTime(){
+        ToggleGroup Time = new ToggleGroup();
+        Time1.setToggleGroup(Time);
+        Time2.setToggleGroup(Time);
 
-}
+        if(!DtoA.isSelected()){
+            tp.setText("Pls Select Route");
+        }
+        else{
+            if(Time1.isSelected()){
+                rTime.setText("1:00pm");
+            }
+            else if (Time2.isSelected()){
+                rTime.setText("5:00pm");
+            }
+        }
+    }
+
+    @FXML
+    private void A1(){
+        if(!DtoA.isSelected()){
+            tp.setText("Pls Select Route");
+        }
+        else {
+                rSeat.setText("A1");
+                Seat.setText("A1");
+                SeatStat.setText("AVAILABLE");
+            }
+        }
+    }
+

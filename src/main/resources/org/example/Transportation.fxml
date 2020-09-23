@@ -49,17 +49,17 @@
             <font>
                 <Font size="11.0" />
             </font></RadioButton>
-        <Label layoutX="279.0" layoutY="251.0" prefHeight="27.0" prefWidth="319.0" text="Select Time:">
+        <Label layoutX="279.0" layoutY="251.0" prefHeight="27.0" prefWidth="109.0" text="Select Time:">
             <font>
                 <Font name="Arial Bold" size="16.0" />
             </font>
         </Label>
-        <RadioButton fx:id="Time1" layoutX="317.0" layoutY="281.0" mnemonicParsing="false" text="Time 1">
+        <RadioButton fx:id="Time1" layoutX="317.0" layoutY="281.0" mnemonicParsing="false" onAction="#selectTime" text="--:--">
             <font>
                 <Font size="11.0" />
             </font>
         </RadioButton>
-        <RadioButton fx:id="Time2" layoutX="533.0" layoutY="279.0" mnemonicParsing="false" text="Time 2">
+        <RadioButton fx:id="Time2" layoutX="533.0" layoutY="279.0" mnemonicParsing="false" onAction="#selectTime" text="--:--">
             <font>
                 <Font size="11.0" />
             </font>
@@ -72,7 +72,7 @@
         </Label>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4e5b68" height="62.0" layoutX="278.0" layoutY="345.0" stroke="BLACK" strokeType="INSIDE" width="241.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4e5b68" height="62.0" layoutX="277.0" layoutY="427.0" stroke="BLACK" strokeType="INSIDE" width="241.0" />
-        <Button fx:id="A1" layoutX="279.0" layoutY="346.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="41.0" text="A1" />
+        <Button fx:id="A1" layoutX="279.0" layoutY="346.0" mnemonicParsing="false" onAction="#A1" prefHeight="31.0" prefWidth="41.0" text="A1" />
         <Label layoutX="275.0" layoutY="316.0" prefHeight="27.0" prefWidth="506.0" text="Select Seat: " textFill="WHITE">
             <font>
                 <Font name="Arial Bold" size="16.0" />
@@ -213,5 +213,10 @@
                 <Font name="Arial Bold" size="22.0" />
             </font>
         </Label>
+      <Label fx:id="tp" alignment="CENTER" layoutX="386.0" layoutY="182.0" prefHeight="25.0" prefWidth="119.0" textFill="#ff4a4a">
+         <font>
+            <Font name="Arial Bold" size="10.0" />
+         </font>
+      </Label>
     </children>
 </Pane>
