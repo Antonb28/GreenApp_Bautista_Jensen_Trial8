@@ -7,8 +7,9 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
-public class Transportation {
+public class Transportation{
     @FXML
     RadioButton DtoA;
     @FXML
@@ -61,6 +62,8 @@ public class Transportation {
     Button F4;
 
     public int Sched;
+    public int SeatSelected;
+    Seats av = new Seats();
 
     @FXML
     private void DtoA() throws IOException {
@@ -72,6 +75,7 @@ public class Transportation {
 
     @FXML
     private void selectTime(){
+        LocalDate date = LocalDate.now();
         ToggleGroup Time = new ToggleGroup();
         Time1.setToggleGroup(Time);
         Time2.setToggleGroup(Time);
@@ -81,11 +85,11 @@ public class Transportation {
         }
         else{
             if(Time1.isSelected()){
-                rTime.setText("1:00pm");
+                rTime.setText(date + "   1:00pm");
                 Sched = 1;
             }
             else if (Time2.isSelected()){
-                rTime.setText("5:00pm");
+                rTime.setText(date + "   5:00pm");
                 Sched = 2;
             }
         }
@@ -93,14 +97,279 @@ public class Transportation {
 
     @FXML
     private void A1(){
+        int status;
         if(!DtoA.isSelected()){
             tp.setText("Pls Select Route");
         }
         else {
                 rSeat.setText("A1");
                 Seat.setText("A1");
+                status = av.LookUpSeat(Sched,1);
+                if(status == 1){
+                    SeatStat.setText("SEAT TAKEN");
+                    SeatSelected = 0;
+                }
+                else if(status == 2){
+                    SeatStat.setText("AVAILABLE");
+                    SeatSelected = 1;
+                }
+            }
+    }
+
+    @FXML
+    private void B2(){
+        int status;
+        if(!DtoA.isSelected()){
+            tp.setText("Pls Select Route");
+        }
+        else {
+            rSeat.setText("B2");
+            Seat.setText("B2");
+            status = av.LookUpSeat(Sched,2);
+            if(status == 1){
+                SeatStat.setText("SEAT TAKEN");
+                SeatSelected = 0;
+            }
+            else if(status == 2){
                 SeatStat.setText("AVAILABLE");
+                SeatSelected = 2;
             }
         }
     }
+
+    @FXML
+    private void C1(){
+        int status;
+        if(!DtoA.isSelected()){
+            tp.setText("Pls Select Route");
+        }
+        else {
+            rSeat.setText("C1");
+            Seat.setText("C1");
+            status = av.LookUpSeat(Sched,3);
+            if(status == 1){
+                SeatStat.setText("SEAT TAKEN");
+                SeatSelected = 0;
+            }
+            else if(status == 2){
+                SeatStat.setText("AVAILABLE");
+                SeatSelected = 3;
+            }
+        }
+    }
+
+    @FXML
+    private void D2(){
+        int status;
+        if(!DtoA.isSelected()){
+            tp.setText("Pls Select Route");
+        }
+        else {
+            rSeat.setText("D2");
+            Seat.setText("D2");
+            status = av.LookUpSeat(Sched,4);
+            if(status == 1){
+                SeatStat.setText("SEAT TAKEN");
+                SeatSelected = 0;
+            }
+            else if(status == 2){
+                SeatStat.setText("AVAILABLE");
+                SeatSelected = 4;
+            }
+        }
+    }
+
+    @FXML
+    private void E1(){
+        int status;
+        if(!DtoA.isSelected()){
+            tp.setText("Pls Select Route");
+        }
+        else {
+            rSeat.setText("E1");
+            Seat.setText("E1");
+            status = av.LookUpSeat(Sched,5);
+            if(status == 1){
+                SeatStat.setText("SEAT TAKEN");
+                SeatSelected = 0;
+            }
+            else if(status == 2){
+                SeatStat.setText("AVAILABLE");
+                SeatSelected = 5;
+            }
+        }
+    }
+
+    @FXML
+    private void F2(){
+        int status;
+        if(!DtoA.isSelected()){
+            tp.setText("Pls Select Route");
+        }
+        else {
+            rSeat.setText("F2");
+            Seat.setText("F2");
+            status = av.LookUpSeat(Sched,6);
+            if(status == 1){
+                SeatStat.setText("SEAT TAKEN");
+                SeatSelected = 0;
+            }
+            else if(status == 2){
+                SeatStat.setText("AVAILABLE");
+                SeatSelected = 6;
+            }
+        }
+    }
+
+    @FXML
+    private void A3(){
+        int status;
+        if(!DtoA.isSelected()){
+            tp.setText("Pls Select Route");
+        }
+        else {
+            rSeat.setText("A3");
+            Seat.setText("A3");
+            status = av.LookUpSeat(Sched,7);
+            if(status == 1){
+                SeatStat.setText("SEAT TAKEN");
+                SeatSelected = 0;
+            }
+            else if(status == 2){
+                SeatStat.setText("AVAILABLE");
+                SeatSelected = 7;
+            }
+        }
+    }
+
+    @FXML
+    private void B4(){
+        int status;
+        if(!DtoA.isSelected()){
+            tp.setText("Pls Select Route");
+        }
+        else {
+            rSeat.setText("B4");
+            Seat.setText("B4");
+            status = av.LookUpSeat(Sched,8);
+            if(status == 1){
+                SeatStat.setText("SEAT TAKEN");
+                SeatSelected = 0;
+            }
+            else if(status == 2){
+                SeatStat.setText("AVAILABLE");
+                SeatSelected = 8;
+            }
+        }
+    }
+
+    @FXML
+    private void C3(){
+        int status;
+        if(!DtoA.isSelected()){
+            tp.setText("Pls Select Route");
+        }
+        else {
+            rSeat.setText("C3");
+            Seat.setText("C3");
+            status = av.LookUpSeat(Sched,9);
+            if(status == 1){
+                SeatStat.setText("SEAT TAKEN");
+                SeatSelected = 0;
+            }
+            else if(status == 2){
+                SeatStat.setText("AVAILABLE");
+                SeatSelected = 9;
+            }
+        }
+    }
+
+    @FXML
+    private void D4(){
+        int status;
+        if(!DtoA.isSelected()){
+            tp.setText("Pls Select Route");
+        }
+        else {
+            rSeat.setText("D4");
+            Seat.setText("D4");
+            status = av.LookUpSeat(Sched,10);
+            if(status == 1){
+                SeatStat.setText("SEAT TAKEN");
+                SeatSelected = 0;
+            }
+            else if(status == 2){
+                SeatStat.setText("AVAILABLE");
+                SeatSelected = 10;
+            }
+        }
+    }
+
+    @FXML
+    private void E3(){
+        int status;
+        if(!DtoA.isSelected()){
+            tp.setText("Pls Select Route");
+        }
+        else {
+            rSeat.setText("E3");
+            Seat.setText("E3");
+            status = av.LookUpSeat(Sched,11);
+            if(status == 1){
+                SeatStat.setText("SEAT TAKEN");
+                SeatSelected = 0;
+            }
+            else if(status == 2){
+                SeatStat.setText("AVAILABLE");
+                SeatSelected = 11;
+            }
+        }
+    }
+
+    @FXML
+    private void F4(){
+        int status;
+        if(!DtoA.isSelected()){
+            tp.setText("Pls Select Route");
+        }
+        else {
+            rSeat.setText("F4");
+            Seat.setText("F4");
+            status = av.LookUpSeat(Sched,12);
+            if(status == 1){
+                SeatStat.setText("SEAT TAKEN");
+                SeatSelected = 0;
+            }
+            else if(status == 2){
+                SeatStat.setText("AVAILABLE");
+                SeatSelected = 12;
+            }
+        }
+    }
+
+
+    @FXML
+    private void Confirm(){
+        int status;
+        int number = (int) (100000 + Math.random()*(999-100)-100);
+        String res = Integer.toString(number);
+        status = av.seatSelect(Sched,SeatSelected);
+        if(SeatSelected != 0) {
+            if ((status == 1)) {
+                rPrompt.setText("Reservation Successful!");
+                rNumber.setText(res);
+            }
+        }
+        if(SeatSelected == 0) {
+            rPrompt.setText("Reservation Failed");
+        }
+    }
+
+    @FXML
+    private void Back() throws IOException {
+        App.setRoot("MainMenu");
+    }
+
+    }
+
 
