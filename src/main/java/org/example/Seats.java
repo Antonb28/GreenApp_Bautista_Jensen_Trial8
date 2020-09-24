@@ -35,7 +35,7 @@ public class Seats {
         }
         else if (time ==2){
             sched2[ref] = 1;
-            ret = 2;
+            ret = 1;
         }
         return ret;
     }

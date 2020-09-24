@@ -89,7 +89,7 @@ public class Transportation{
                 Sched = 1;
             }
             else if (Time2.isSelected()){
-                rTime.setText(date + "   5:00pm");
+                rTime.setText(date + "   5:30pm");
                 Sched = 2;
             }
         }
