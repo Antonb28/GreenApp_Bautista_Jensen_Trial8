@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -27,7 +28,7 @@
             </font>
         </Label>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#47943f" height="531.0" layoutX="242.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="571.0" />
-        <Label fx:id="GreetingPrompt" layoutX="274.0" layoutY="30.0"  prefHeight="27.0" prefWidth="506.0" text="Good Day Lasallian, What would you like to do" textFill="WHITE">
+        <Label fx:id="GreetingPrompt" layoutX="274.0" layoutY="30.0" prefHeight="27.0" prefWidth="506.0" text="Good Day Lasallian, What would you like to do" textFill="WHITE">
             <font>
                 <Font name="Arial Bold" size="19.0" />
             </font>
@@ -48,6 +49,11 @@
             <image>
             </image>
         </ImageView>
+      <ImageView fitHeight="155.0" fitWidth="400.0" layoutX="150.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../../assets/MenuFood.png" />
+         </image>
+      </ImageView>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#616161" height="61.0" layoutX="272.0" layoutY="335.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="154.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#616161" height="61.0" layoutX="450.0" layoutY="335.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="154.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#616161" height="61.0" layoutX="627.0" layoutY="333.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="154.0" />
@@ -87,7 +93,7 @@
             </font>
         </Label>
         <Button fx:id="OrderFood" layoutX="315.0" layoutY="413.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="66.0" text="Select" />
-        <Button fx:id="BusReservation" layoutX="496.0" layoutY="413.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="66.0" text="Select" onAction="#Transportation"/>
+        <Button fx:id="BusReservation" layoutX="496.0" layoutY="413.0" mnemonicParsing="false" onAction="#Transportation" prefHeight="27.0" prefWidth="66.0" text="Select" />
         <Button fx:id="Bookstore" layoutX="671.0" layoutY="413.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="66.0" text="Select" />
     </children>
 </Pane>
