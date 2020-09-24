@@ -32,4 +32,9 @@ public class MainMenu {
         App.setRoot("MainMenu");
     }
 
+    @FXML
+    private void Food() throws IOException{
+        App.setRoot("FoodMenu");
+    }
+
 }

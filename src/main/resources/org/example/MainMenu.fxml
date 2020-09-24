@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MainMenu">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MainMenu">
     <children>
       <VBox layoutX="-3.0" layoutY="-10.0" prefHeight="542.0" prefWidth="817.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a3a1" height="9.0" layoutX="-15.0" layoutY="385.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="272.0" />
@@ -92,7 +89,7 @@
                 <Font name="Arial Bold" size="19.0" />
             </font>
         </Label>
-        <Button fx:id="OrderFood" layoutX="315.0" layoutY="413.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="66.0" text="Select" />
+        <Button fx:id="OrderFood" layoutX="315.0" layoutY="413.0" mnemonicParsing="false" onAction="#Food" prefHeight="27.0" prefWidth="66.0" text="Select" />
         <Button fx:id="BusReservation" layoutX="496.0" layoutY="413.0" mnemonicParsing="false" onAction="#Transportation" prefHeight="27.0" prefWidth="66.0" text="Select" />
         <Button fx:id="Bookstore" layoutX="671.0" layoutY="413.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="66.0" text="Select" />
     </children>

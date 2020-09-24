@@ -6,6 +6,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
@@ -28,9 +30,9 @@
             </font>
         </Label>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#47943f" height="531.0" layoutX="242.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="571.0" />
-        <Label fx:id="GreetingPrompt" layoutX="274.0" layoutY="30.0" prefHeight="27.0" prefWidth="506.0" text="Good Day Lasallian, What would you like to do" textFill="WHITE">
+        <Label fx:id="GreetingPrompt" layoutX="273.0" layoutY="13.0" prefHeight="27.0" prefWidth="506.0" text="Order Food" textFill="WHITE">
             <font>
-                <Font name="Arial Bold" size="19.0" />
+                <Font name="Arial Bold" size="45.0" />
             </font>
         </Label>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="11.0" layoutX="274.0" layoutY="64.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="506.0" />
@@ -42,58 +44,91 @@
         <Button fx:id="Details" layoutY="189.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="241.0" text="User Details" />
         <Button fx:id="Help" layoutX="-1.0" layoutY="264.0" mnemonicParsing="false" onAction="#Help" prefHeight="27.0" prefWidth="241.0" text="Help Button" />
         <Button fx:id="LogOut" layoutY="340.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="27.0" prefWidth="241.0" text="Log Out" />
-        <Rectangle fill="WHITE" height="396.0" layoutX="274.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="152.0" />
-        <Rectangle fill="WHITE" height="396.0" layoutX="628.0" layoutY="93.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="152.0" />
-        <Rectangle fill="WHITE" height="396.0" layoutX="451.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="152.0" />
-        <ImageView fitHeight="152.0" fitWidth="412.0" layoutX="152.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
-            <image>
-            </image>
-        </ImageView>
-        <ImageView fitHeight="155.0" fitWidth="400.0" layoutX="150.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
-            <image>
-                <Image url="@../../assets/MenuFood.png" />
-            </image>
-        </ImageView>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#616161" height="61.0" layoutX="272.0" layoutY="335.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="154.0" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#616161" height="61.0" layoutX="450.0" layoutY="335.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="154.0" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#616161" height="61.0" layoutX="627.0" layoutY="333.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="154.0" />
-        <Label alignment="CENTER" layoutX="272.0" layoutY="341.0" prefHeight="22.0" prefWidth="155.0" text="Order" textFill="WHITE">
-            <font>
-                <Font name="Arial Bold" size="19.0" />
-            </font>
-        </Label>
+        <Rectangle height="123.0" layoutX="274.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="506.0" />
         <Label layoutX="473.0" layoutY="339.0" textFill="WHITE">
             <font>
                 <Font name="Arial Bold" size="19.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="271.0" layoutY="365.0" prefHeight="22.0" prefWidth="155.0" text="Food" textFill="WHITE">
-            <font>
-                <Font name="Arial Bold" size="19.0" />
-            </font>
-        </Label>
-        <Label alignment="CENTER" layoutX="449.0" layoutY="342.0" prefHeight="22.0" prefWidth="155.0" text="P2P Bus Seat" textFill="WHITE">
-            <font>
-                <Font name="Arial Bold" size="19.0" />
-            </font>
-        </Label>
-        <Label alignment="CENTER" layoutX="450.0" layoutY="366.0" prefHeight="22.0" prefWidth="155.0" text="Reservation" textFill="WHITE">
-            <font>
-                <Font name="Arial Bold" size="19.0" />
-            </font>
-        </Label>
-        <Label alignment="CENTER" layoutX="626.0" layoutY="339.0" prefHeight="22.0" prefWidth="155.0" text="Bookstore" textFill="WHITE">
-            <font>
-                <Font name="Arial Bold" size="19.0" />
-            </font>
-        </Label>
-        <Label alignment="CENTER" layoutX="628.0" layoutY="361.0" prefHeight="22.0" prefWidth="155.0" text="Services" textFill="WHITE">
-            <font>
-                <Font name="Arial Bold" size="19.0" />
-            </font>
-        </Label>
-        <Button fx:id="OrderFood" layoutX="315.0" layoutY="413.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="66.0" text="Select" />
-        <Button fx:id="BusReservation" layoutX="496.0" layoutY="413.0" mnemonicParsing="false" onAction="#Transportation" prefHeight="27.0" prefWidth="66.0" text="Select" />
-        <Button fx:id="Bookstore" layoutX="671.0" layoutY="413.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="66.0" text="Select" />
+      <ImageView fitHeight="136.0" fitWidth="123.0" layoutX="277.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/Good%20Munch.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle fill="WHITE" height="123.0" layoutX="273.0" layoutY="236.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="506.0" />
+      <Rectangle fill="WHITE" height="123.0" layoutX="275.0" layoutY="380.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="506.0" />
+      <ImageView fitHeight="115.0" fitWidth="145.0" layoutX="275.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/52e0bf_07f854d8165a4936b5794c55e3e4e1f6_mv2_d_1500_1500_s_2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="136.0" fitWidth="123.0" layoutX="273.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/Colonels%20Curry.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="123.0" fitWidth="393.0" layoutX="394.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/Screen%20Shot%202020-09-24%20at%208.52.39%20PM.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="123.0" fitWidth="393.0" layoutX="396.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/Screen%20Shot%202020-09-24%20at%209.02.00%20PM.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="123.0" fitWidth="383.0" layoutX="403.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/Screen%20Shot%202020-09-24%20at%209.15.31%20PM.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="44.0" layoutX="403.0" layoutY="95.0" opacity="0.66" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="377.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="44.0" layoutX="396.0" layoutY="236.0" opacity="0.66" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="383.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle arcWidth="5.0" height="44.0" layoutX="394.0" layoutY="380.0" opacity="0.66" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="387.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Label fx:id="GreetingPrompt1" layoutX="410.0" layoutY="99.0" prefHeight="36.0" prefWidth="252.0" text="Good Munch" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="GreetingPrompt11" layoutX="412.0" layoutY="238.0" prefHeight="36.0" prefWidth="252.0" text="Colonel's Curry" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="GreetingPrompt111" layoutX="409.0" layoutY="383.0" prefHeight="36.0" prefWidth="252.0" text="Ate Rica's Bacsilog" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="678.0" layoutY="103.0" mnemonicParsing="false" text="Order Now" />
+      <Button layoutX="681.0" layoutY="244.0" mnemonicParsing="false" text="Order Now" />
+      <Button layoutX="682.0" layoutY="388.0" mnemonicParsing="false" text="Order Now" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="2.0" layoutX="409.0" layoutY="131.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="256.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="2.0" layoutX="409.0" layoutY="273.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="256.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="2.0" layoutX="404.0" layoutY="418.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="256.0" />
     </children>
 </Pane>
