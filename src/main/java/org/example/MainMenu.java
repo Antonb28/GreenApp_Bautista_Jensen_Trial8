@@ -4,6 +4,7 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 
@@ -11,6 +12,10 @@ public class MainMenu {
     Users us = new Users();
     @FXML
     Label GreetingPrompt;
+    @FXML
+    Rectangle FClick;
+    @FXML
+    Rectangle TClick;
 
     @FXML
     private void LogOut() throws IOException {
@@ -35,6 +40,26 @@ public class MainMenu {
     @FXML
     private void Food() throws IOException{
         App.setRoot("FoodMenu");
+    }
+
+    @FXML
+    private void FoodDetect() throws IOException{
+        FClick.setOpacity(.25);
+    }
+
+    @FXML
+    private void FoodExit() throws IOException{
+        FClick.setOpacity(0);
+    }
+
+    @FXML
+    private void TransDetect() throws IOException{
+        TClick.setOpacity(.25);
+    }
+
+    @FXML
+    private void TransExit() throws IOException{
+        TClick.setOpacity(0);
     }
 
 }
