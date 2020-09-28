@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -28,8 +30,9 @@
             </font>
         </Label>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="11.0" layoutX="274.0" layoutY="64.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="506.0" />
-        <Rectangle fill="WHITE" height="56.0" layoutX="270.0" layoutY="275.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="515.0" />
+        <Rectangle fill="WHITE" height="56.0" layoutX="270.0" layoutY="261.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="515.0" />
         <Rectangle fill="WHITE" height="68.0" layoutX="271.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="515.0" />
+      <Rectangle fill="#2c2c2c" height="68.0" layoutX="269.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="178.0" />
         <Label layoutX="473.0" layoutY="339.0" textFill="WHITE">
             <font>
                 <Font name="Arial Bold" size="19.0" />
@@ -40,70 +43,181 @@
                 <Font name="Arial Bold" size="21.0" />
             </font>
         </Label>
-        <Label layoutX="278.0" layoutY="180.0" prefHeight="27.0" prefWidth="506.0" text="Select File:">
+        <Label layoutX="276.0" layoutY="182.0" prefHeight="27.0" prefWidth="506.0" text="Step 1: Select File" textFill="WHITE">
             <font>
-                <Font name="Arial Bold" size="16.0" />
+                <Font name="Arial Bold" size="14.0" />
             </font>
         </Label>
-        <Label layoutX="275.0" layoutY="273.0" prefHeight="27.0" prefWidth="109.0" text="Select Time:">
+        <Label layoutX="275.0" layoutY="259.0" prefHeight="27.0" prefWidth="336.0" text="Step 2: Print Type, Pages, and Copies">
             <font>
-                <Font name="Arial Bold" size="16.0" />
+                <Font name="Arial Bold" size="14.0" />
             </font>
         </Label>
-        <Button fx:id="back" layoutX="40.0" layoutY="474.0" mnemonicParsing="false" onAction="#Back" prefHeight="31.0" prefWidth="168.0" text="Back to Menu" />
+        <Button fx:id="back" layoutX="40.0" layoutY="478.0" mnemonicParsing="false" onAction="#Back" prefHeight="31.0" prefWidth="168.0" text="Back to Menu" />
         <Label fx:id="rPrompt" alignment="CENTER" layoutX="-1.0" layoutY="443.0" prefHeight="25.0" prefWidth="242.0" textFill="#ff4a4a">
             <font>
                 <Font name="Arial Bold" size="15.0" />
             </font>
         </Label>
-        <Rectangle fill="WHITE" height="164.0" layoutX="548.0" layoutY="341.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="237.0" />
-        <Label alignment="CENTER" layoutX="-1.0" layoutY="211.0" prefHeight="25.0" prefWidth="249.0" text="Route:">
+        <Label layoutX="14.0" layoutY="211.0" prefHeight="25.0" prefWidth="224.0" text="File Name:">
             <font>
-                <Font name="System Bold" size="15.0" />
+                <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="-3.0" layoutY="266.0" prefHeight="25.0" prefWidth="249.0" text="Date &amp; Time:">
+        <Label layoutX="14.0" layoutY="242.0" prefHeight="25.0" prefWidth="225.0" text="Print Type:">
             <font>
-                <Font name="System Bold" size="15.0" />
+                <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="-3.0" layoutY="326.0" prefHeight="25.0" prefWidth="249.0" text="Seat:">
+        <Label fx:id="rName" alignment="CENTER" layoutX="90.0" layoutY="216.0" prefHeight="17.0" prefWidth="153.0" text="----">
             <font>
-                <Font name="System Bold" size="15.0" />
+                <Font name="Arial Bold" size="12.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="-1.0" layoutY="381.0" prefHeight="25.0" prefWidth="244.0" text="Reservation Number:">
+        <Label fx:id="rType" alignment="CENTER" layoutX="93.0" layoutY="248.0" prefHeight="17.0" prefWidth="148.0" text="----">
             <font>
-                <Font name="System Bold" size="15.0" />
-            </font>
-        </Label>
-        <Label alignment="CENTER" layoutY="234.0" prefHeight="17.0" prefWidth="242.0" text="----">
-            <font>
-                <Font name="Arial Bold" size="15.0" />
-            </font>
-        </Label>
-        <Label alignment="CENTER" layoutX="-3.0" layoutY="287.0" prefHeight="17.0" prefWidth="249.0" text="----">
-            <font>
-                <Font name="Arial Bold" size="15.0" />
-            </font>
-        </Label>
-        <Label alignment="CENTER" layoutX="-4.0" layoutY="348.0" prefHeight="17.0" prefWidth="249.0" text="----">
-            <font>
-                <Font name="Arial Bold" size="15.0" />
-            </font>
-        </Label>
-        <Label alignment="CENTER" layoutX="-3.0" layoutY="404.0" prefHeight="17.0" prefWidth="249.0" text="----">
-            <font>
-                <Font name="Arial Bold" size="15.0" />
+                <Font name="Arial Bold" size="12.0" />
             </font>
         </Label>
         <Rectangle fill="#515151" height="80.0" layoutX="272.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="217.0" />
         <Rectangle fill="#00bfff" height="80.0" layoutX="500.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="285.0" />
-        <Label fx:id="tp" alignment="CENTER" layoutX="386.0" layoutY="182.0" prefHeight="25.0" prefWidth="119.0" textFill="#ff4a4a">
-            <font>
-                <Font name="Arial Bold" size="10.0" />
-            </font>
-        </Label>
-      <Button fx:id="SelectFile" layoutX="310.0" layoutY="210.0" mnemonicParsing="false" onAction="#fileSelect" prefHeight="27.0" prefWidth="138.0" text="Select File" />
+      <Button fx:id="SelectFile" layoutX="289.0" layoutY="210.0" mnemonicParsing="false" onAction="#fileSelect" prefHeight="27.0" prefWidth="138.0" text="Select File" />
+      <Label fx:id="SelectPrompt" alignment="CENTER" layoutX="455.0" layoutY="210.0" prefHeight="16.0" prefWidth="316.0" text="-no file selected-" textFill="#eb6969">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="454.0" layoutY="181.0" prefHeight="27.0" prefWidth="150.0" text="Selected File:">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="Colored" layoutX="322.0" layoutY="287.0" mnemonicParsing="false" onAction="#selectType" text="Colored" />
+      <RadioButton fx:id="BW" layoutX="426.0" layoutY="287.0" mnemonicParsing="false" onAction="#selectType" text="Black and White" />
+      <Rectangle fill="WHITE" height="56.0" layoutX="270.0" layoutY="331.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="515.0" />
+      <Label layoutX="275.0" layoutY="330.0" prefHeight="27.0" prefWidth="215.0" text="Step 3: Paper Size">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="A4" layoutX="324.0" layoutY="361.0" mnemonicParsing="false" text="A4" />
+      <RadioButton fx:id="ShortBond" layoutX="405.0" layoutY="361.0" mnemonicParsing="false" text="US Letter (short bond)" />
+      <RadioButton fx:id="LongBond" layoutX="594.0" layoutY="361.0" mnemonicParsing="false" text="US Legal (long bond)" />
+      <Rectangle fill="#2c2c2c" height="56.0" layoutX="574.0" layoutY="261.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="211.0" />
+      <Label alignment="CENTER" layoutX="571.0" layoutY="259.0" prefHeight="27.0" prefWidth="109.0" text="No. of Pages" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="pages" layoutX="601.0" layoutY="284.0" prefHeight="22.0" prefWidth="49.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="copies" layoutX="710.0" layoutY="284.0" prefHeight="22.0" prefWidth="49.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="679.0" layoutY="259.0" prefHeight="27.0" prefWidth="109.0" text="No. of Copies" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="278.0" prefHeight="25.0" prefWidth="225.0" text="No. of Pages:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="rPage" alignment="CENTER" layoutX="107.0" layoutY="284.0" prefHeight="17.0" prefWidth="122.0" text="----">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="316.0" prefHeight="25.0" prefWidth="225.0" text="No. of Copies:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="rCopies" alignment="CENTER" layoutX="101.0" layoutY="321.0" prefHeight="17.0" prefWidth="133.0" text="----">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="349.0" prefHeight="25.0" prefWidth="225.0" text="Paper Size:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Rectangle fill="WHITE" height="98.0" layoutX="269.0" layoutY="401.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="515.0" />
+      <Label layoutX="276.0" layoutY="399.0" prefHeight="27.0" prefWidth="215.0" text="Step 4: Set Pick Up Time">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="rSize" alignment="CENTER" layoutX="103.0" layoutY="355.0" prefHeight="17.0" prefWidth="133.0" text="---- ">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="380.0" prefHeight="25.0" prefWidth="225.0" text="Pick-Up Time:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="rTime" alignment="CENTER" layoutX="101.0" layoutY="384.0" prefHeight="17.0" prefWidth="133.0" text="----">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Rectangle fill="#2c2c2c" height="99.0" layoutX="523.0" layoutY="401.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="261.0" />
+      <Label alignment="CENTER" layoutX="524.0" layoutY="406.0" prefHeight="27.0" prefWidth="260.0" text="Confirm Transaction " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="558.0" layoutY="437.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="192.0" text="Confirm ">
+         <font>
+            <Font size="11.0" />
+         </font></Button>
+      <TextField fx:id="hour" layoutX="294.0" layoutY="436.0" prefHeight="27.0" prefWidth="28.0" />
+      <Label alignment="CENTER" layoutX="325.0" layoutY="430.0" prefHeight="27.0" prefWidth="10.0" text=":">
+         <font>
+            <Font name="Arial Bold" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="minute" layoutX="337.0" layoutY="436.0" prefHeight="27.0" prefWidth="42.0" />
+      <RadioButton layoutX="402.0" layoutY="440.0" mnemonicParsing="false" text="AM" />
+      <RadioButton layoutX="466.0" layoutY="440.0" mnemonicParsing="false" text="PM" />
+      <Label fx:id="SelectPrompt1" alignment="CENTER" layoutX="272.0" layoutY="469.0" prefHeight="21.0" prefWidth="251.0" textFill="#eb6969">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="SelectPrompt11" alignment="CENTER" layoutX="529.0" layoutY="470.0" prefHeight="21.0" prefWidth="251.0" textFill="#66ae54">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="410.0" prefHeight="25.0" prefWidth="225.0" text="Price:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="rTotal" alignment="CENTER" layoutX="101.0" layoutY="414.0" prefHeight="17.0" prefWidth="133.0" text="----">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="439.0" prefHeight="25.0" prefWidth="225.0" text="Reference No:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="ReferenceNum" alignment="CENTER" layoutX="106.0" layoutY="443.0" prefHeight="17.0" prefWidth="122.0" text="----">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
     </children>
 </Pane>
