@@ -99,6 +99,6 @@
         </Label>
       <Rectangle fx:id="FClick" arcHeight="5.0" arcWidth="5.0" fill="#fbff00" height="402.0" layoutX="273.0" layoutY="91.0" onMouseClicked="#Food" onMouseEntered="#FoodDetect" onMouseExited="#FoodExit" opacity="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="154.0" />
       <Rectangle fx:id="TClick" arcHeight="5.0" arcWidth="5.0" fill="#fbff00" height="396.0" layoutX="451.0" layoutY="95.0" onMouseClicked="#Transportation" onMouseEntered="#TransDetect" onMouseExited="#TransExit" opacity="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="153.0" />
-      <Rectangle fx:id="PClick" arcHeight="5.0" arcWidth="5.0" fill="#fbff00" height="396.0" layoutX="627.0" layoutY="93.0" onMouseClicked="#" onMouseDragEntered="#PrintDetect" onMouseDragExited="#PrintExit" onMouseEntered="#PrintDetect" onMouseExited="#PrintExit" opacity="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="153.0" />
+      <Rectangle fx:id="printClick" arcHeight="5.0" arcWidth="5.0" fill="#fbff00" height="396.0" layoutX="627.0" layoutY="93.0" onMouseClicked="#Print" onMouseDragEntered="#PrintDetect" onMouseDragExited="#PrintExit" onMouseEntered="#PrintDetect" onMouseExited="#PrintExit" opacity="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="153.0" />
     </children>
 </Pane>

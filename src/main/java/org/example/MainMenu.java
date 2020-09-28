@@ -16,7 +16,7 @@ public class MainMenu {
     @FXML
     Rectangle TClick;
     @FXML
-    Rectangle PClick;
+    Rectangle printClick;
 
     @FXML
     private void LogOut() throws IOException {
@@ -44,6 +44,11 @@ public class MainMenu {
     }
 
     @FXML
+    private void Print() throws IOException{
+        App.setRoot("Printing");
+    }
+
+    @FXML
     private void FoodDetect() throws IOException{
         FClick.setOpacity(.25);
     }
@@ -65,12 +70,12 @@ public class MainMenu {
 
     @FXML
     private void PrintDetect() throws IOException{
-        PClick.setOpacity(.25);
+        printClick.setOpacity(.25);
     }
 
     @FXML
     private void PrintExit() throws IOException{
-        PClick.setOpacity(0);
+        printClick.setOpacity(0);
     }
 
 }
