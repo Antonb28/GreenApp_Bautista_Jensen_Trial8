@@ -23,6 +23,10 @@ public class Printing {
     @FXML
     RadioButton LongBond;
     @FXML
+    RadioButton AM;
+    @FXML
+    RadioButton PM;
+    @FXML
     TextField copies;
     @FXML
     TextField pages;
@@ -46,8 +50,10 @@ public class Printing {
     Label rTotal;
     @FXML
     Label ReferenceNum;
+    @FXML
+    Label ConfirmPrompt;
 
-    int PriceType = 0;
+    int PriceType = 0, total, netTotal;
 
     @FXML
     private void Back() throws IOException {
@@ -81,4 +87,61 @@ public class Printing {
             PriceType = 10;
         }
     }
+
+    @FXML
+    private void selectSize() throws IOException{
+        ToggleGroup Size = new ToggleGroup();
+        A4.setToggleGroup(Size);
+        LongBond.setToggleGroup(Size);
+        ShortBond.setToggleGroup(Size);
+
+        String Copy = copies.getText();
+        String Page = pages.getText();
+
+        rPage.setText(Page);
+        rCopies.setText(Copy);
+
+        int cp = Integer.parseInt(String.valueOf(Copy));
+        int pg = Integer.parseInt(String.valueOf(Page));
+
+        total = pg*PriceType;
+        netTotal = total*cp;
+        rTotal.setText(netTotal + " PHP");
+
+        if(A4.isSelected()){
+            rSize.setText("A4");
+        }
+        else if(LongBond.isSelected()){
+            rSize.setText("US Legal");
+        }
+        else if(ShortBond.isSelected()){
+            rSize.setText("US Letter");
+        }
+    }
+
+    @FXML
+    private void inputTime() throws IOException{
+        ToggleGroup Time = new ToggleGroup();
+        AM.setToggleGroup(Time);
+        PM.setToggleGroup(Time);
+
+        String hr = hour.getText();
+        String mn = minute.getText();
+
+        if(AM.isSelected()){
+            rTime.setText(hr+":"+mn+" AM");
+        }
+        else if(PM.isSelected()){
+            rTime.setText(hr+":"+mn+" PM");
+        }
+    }
+
+    @FXML
+    private void confirm() throws IOException{
+        int number = (int) (100000 + Math.random()*(999-100)-100);
+        String res = Integer.toString(number);
+        ConfirmPrompt.setText("Transaction Successful!");
+        ReferenceNum.setText(res);
+    }
+
 }
