@@ -9,7 +9,6 @@ import javafx.stage.Stage;
 
 
 public class MainMenu {
-    Users us = new Users();
     @FXML
     Label GreetingPrompt;
     @FXML
