@@ -1,39 +1,30 @@
 package org.example;
 
-public class Users {
-    int UserNumber;
-    public int CheckUser(String User, String Pass){
-        if (User.equals("john_anthony_jose@dlsu.edu.ph")){
-            if(Pass.equals("SirJose_10")){
-                UserNumber = 2;
+public class Users{
+    public int CheckUser(String User, String Pass) {
+        if (User.equals("john_anthony_jose@dlsu.edu.ph")) {
+            if (Pass.equals("SirJose_10")) {
                 return 2;
-            }
-            else{
+            } else {
                 return 0;
             }
-        }
-        else if (User.equals("antonio_bautista@dlsu.edu.ph")){
-            if(Pass.equals("AntonB28")){
-                UserNumber = 3;
+        } else if (User.equals("antonio_bautista@dlsu.edu.ph")) {
+            if (Pass.equals("AntonB28")) {
                 return 3;
-            }
-            else{
+            } else {
                 return 0;
             }
-        }
-        else if (User.equals("jeremiah_jensen@dlsu.edu.ph")){
-            if(Pass.equals("MrGarvinHaHa")){
-                UserNumber = 4;
+        } else if (User.equals("jeremiah_jensen@dlsu.edu.ph")) {
+            if (Pass.equals("MrGarvinHaHa")) {
                 return 4;
-            }
-            else{
+            } else {
                 return 0;
             }
-        }
-        else{
+        } else {
             return 1;
         }
     }
-
-    public int UserNumber() { return UserNumber; }
 }
+
+
+

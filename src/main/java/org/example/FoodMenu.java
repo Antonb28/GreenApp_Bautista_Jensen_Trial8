@@ -5,15 +5,30 @@ import javafx.fxml.FXML;
 
 public class FoodMenu {
     @FXML
-    private void Back() throws IOException {
+    public void Back() throws IOException {
         App.setRoot("MainMenu");
     }
     @FXML
-    private void LogOut() throws IOException {
+    public void LogOut() throws IOException {
         App.setRoot("LogIn");
     }
     @FXML
-    private void Help() throws IOException {
+    public void Help() throws IOException {
         App.setRoot("HelpMenu");
+    }
+
+    @FXML
+    public void Bacsilog() throws IOException {
+        App.setRoot("Bacsilog");
+    }
+
+    @FXML
+    public void ColonelsCurry() throws IOException {
+        App.setRoot("ColonelsCurry");
+    }
+
+    @FXML
+    public void GoodMunch() throws IOException {
+        App.setRoot("GoodMunch");
     }
 }

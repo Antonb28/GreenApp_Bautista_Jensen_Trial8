@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.FoodMenu">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.FoodMenu">
     <children>
         <VBox layoutX="-3.0" layoutY="-10.0" prefHeight="542.0" prefWidth="817.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a3a1" height="9.0" layoutX="-15.0" layoutY="385.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="272.0" />
@@ -120,9 +120,9 @@
             <Font name="Arial Bold" size="25.0" />
          </font>
       </Label>
-      <Button layoutX="678.0" layoutY="103.0" mnemonicParsing="false" text="Order Now" />
-      <Button layoutX="681.0" layoutY="244.0" mnemonicParsing="false" text="Order Now" />
-      <Button layoutX="682.0" layoutY="388.0" mnemonicParsing="false" text="Order Now" />
+      <Button fx:id="GoodMunch" layoutX="678.0" layoutY="103.0" mnemonicParsing="false" onAction="#GoodMunch" text="Order Now" />
+      <Button fx:id="ColonelsCurry" layoutX="681.0" layoutY="244.0" mnemonicParsing="false" onAction="#ColonelsCurry" text="Order Now" />
+      <Button layoutX="682.0" layoutY="388.0" mnemonicParsing="false" onAction="#Bacsilog" text="Order Now" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="2.0" layoutX="409.0" layoutY="131.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="256.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="2.0" layoutX="409.0" layoutY="273.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="256.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="2.0" layoutX="404.0" layoutY="418.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="256.0" />

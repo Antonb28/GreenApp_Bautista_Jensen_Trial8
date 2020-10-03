@@ -8,7 +8,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
-public class LogIn {
+public class LogIn{
 
     @FXML
     TextField Username;

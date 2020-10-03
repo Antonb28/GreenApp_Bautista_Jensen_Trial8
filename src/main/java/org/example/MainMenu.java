@@ -50,7 +50,7 @@ public class MainMenu {
 
     @FXML
     private void FoodDetect() throws IOException{
-        FClick.setOpacity(.25);
+        FClick.setOpacity(.30);
     }
 
     @FXML
@@ -60,7 +60,7 @@ public class MainMenu {
 
     @FXML
     private void TransDetect() throws IOException{
-        TClick.setOpacity(.25);
+        TClick.setOpacity(.30);
     }
 
     @FXML
@@ -70,7 +70,7 @@ public class MainMenu {
 
     @FXML
     private void PrintDetect() throws IOException{
-        printClick.setOpacity(.25);
+        printClick.setOpacity(.30);
     }
 
     @FXML
