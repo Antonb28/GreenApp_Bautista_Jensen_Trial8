@@ -9,7 +9,7 @@ import org.example.App;
 
 import java.io.IOException;
 
-public class Bacsilog {
+public class Bacsilog implements CheckOut{
     int total =0, input, change;
     int item;
     int [] itemarray = new int[14];
@@ -419,9 +419,13 @@ public class Bacsilog {
         App.setRoot("FoodMenu");
     }
 
+    Receipt r = new Receipt();
+
+
     @FXML
-    private void Payment(){
-        int number = (int) (100000 + Math.random()*(999-100)-100);
+    @Override
+    public void Payment(){
+        int number = r.TransactionNumber();
         String res = Integer.toString(number);
         String pay = Payment.getText();
         if (input < total){

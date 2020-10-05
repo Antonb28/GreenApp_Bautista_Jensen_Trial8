@@ -8,7 +8,7 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-public class ColonelsCurry {
+public class ColonelsCurry implements CheckOut{
     int total =0, input, change;
     int item;
     int [] itemarray = new int[2];
@@ -92,9 +92,12 @@ public class ColonelsCurry {
         }
     }
 
+    Receipt r = new Receipt();
+
     @FXML
-    private void Payment(){
-        int number = (int) (100000 + Math.random()*(999-100)-100);
+    @Override
+    public void Payment(){
+        int number = r.TransactionNumber();
         String res = Integer.toString(number);
         String pay = Payment.getText();
         if (input < total){

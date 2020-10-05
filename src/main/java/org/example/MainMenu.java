@@ -4,6 +4,7 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
@@ -17,6 +18,12 @@ public class MainMenu {
     Rectangle TClick;
     @FXML
     Rectangle printClick;
+    @FXML
+    ImageView Foods;
+    @FXML
+    ImageView Trans;
+    @FXML
+    ImageView Prints;
 
     @FXML
     private void LogOut() throws IOException {
@@ -81,6 +88,36 @@ public class MainMenu {
     @FXML
     private void PrintExit() throws IOException{
         printClick.setOpacity(0);
+    }
+
+    @FXML
+    private void fdDetect() throws IOException{
+        Foods.setOpacity(0);
+    }
+
+    @FXML
+    private void fdExit() throws IOException{
+        Foods.setOpacity(100);
+    }
+
+    @FXML
+    private void trDetect() throws IOException{
+        Trans.setOpacity(0);
+    }
+
+    @FXML
+    private void trExit() throws IOException{
+        Trans.setOpacity(100);
+    }
+
+    @FXML
+    private void prDetect() throws IOException{
+        Prints.setOpacity(0);
+    }
+
+    @FXML
+    private void prExit() throws IOException{
+        Prints.setOpacity(100);
     }
 
 }

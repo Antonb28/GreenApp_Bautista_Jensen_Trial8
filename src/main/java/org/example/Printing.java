@@ -148,9 +148,11 @@ public class Printing {
         }
     }
 
+    Receipt r = new Receipt();
+
     @FXML
     private void confirm() throws IOException{
-        int number = (int) (100000 + Math.random()*(999-100)-100);
+        int number = r.TransactionNumber();
         String res = Integer.toString(number);
         ConfirmPrompt.setText("Transaction Successful!");
         ReferenceNum.setText(res);

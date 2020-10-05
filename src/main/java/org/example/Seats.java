@@ -1,6 +1,6 @@
 package org.example;
 
-public abstract class Seats {
+public class Seats {
     int[] sched1 = {1,1,0,0,0,1,0,0,0,0,0,0};
     int[] sched2 = {0,1,0,1,0,0,0,1,1,0,0,0};
 

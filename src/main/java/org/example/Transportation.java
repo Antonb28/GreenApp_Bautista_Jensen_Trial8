@@ -9,7 +9,7 @@ import javafx.scene.control.ToggleGroup;
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class Transportation extends Seats{
+public class Transportation{
     @FXML
     RadioButton DtoA;
     @FXML
@@ -64,6 +64,8 @@ public class Transportation extends Seats{
     public int Sched;
     public int SeatSelected;
 
+    Seats st = new Seats();
+
     @FXML
     private void DtoA() throws IOException {
         Time1.setText("1:00 pm");
@@ -103,7 +105,7 @@ public class Transportation extends Seats{
         else {
                 rSeat.setText("A1");
                 Seat.setText("A1");
-                status = LookUpSeat(Sched,1);
+                status = st.LookUpSeat(Sched,1);
                 if(status == 1){
                     SeatStat.setText("SEAT TAKEN");
                     SeatSelected = 0;
@@ -124,7 +126,7 @@ public class Transportation extends Seats{
         else {
             rSeat.setText("B2");
             Seat.setText("B2");
-            status = LookUpSeat(Sched,2);
+            status = st.LookUpSeat(Sched,2);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -145,7 +147,7 @@ public class Transportation extends Seats{
         else {
             rSeat.setText("C1");
             Seat.setText("C1");
-            status = LookUpSeat(Sched,3);
+            status = st.LookUpSeat(Sched,3);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -166,7 +168,7 @@ public class Transportation extends Seats{
         else {
             rSeat.setText("D2");
             Seat.setText("D2");
-            status = LookUpSeat(Sched,4);
+            status = st.LookUpSeat(Sched,4);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -187,7 +189,7 @@ public class Transportation extends Seats{
         else {
             rSeat.setText("E1");
             Seat.setText("E1");
-            status = LookUpSeat(Sched,5);
+            status = st.LookUpSeat(Sched,5);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -208,7 +210,7 @@ public class Transportation extends Seats{
         else {
             rSeat.setText("F2");
             Seat.setText("F2");
-            status = LookUpSeat(Sched,6);
+            status = st.LookUpSeat(Sched,6);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -229,7 +231,7 @@ public class Transportation extends Seats{
         else {
             rSeat.setText("A3");
             Seat.setText("A3");
-            status = LookUpSeat(Sched,7);
+            status = st.LookUpSeat(Sched,7);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -250,7 +252,7 @@ public class Transportation extends Seats{
         else {
             rSeat.setText("B4");
             Seat.setText("B4");
-            status = LookUpSeat(Sched,8);
+            status = st.LookUpSeat(Sched,8);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -271,7 +273,7 @@ public class Transportation extends Seats{
         else {
             rSeat.setText("C3");
             Seat.setText("C3");
-            status = LookUpSeat(Sched,9);
+            status = st.LookUpSeat(Sched,9);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -292,7 +294,7 @@ public class Transportation extends Seats{
         else {
             rSeat.setText("D4");
             Seat.setText("D4");
-            status = LookUpSeat(Sched,10);
+            status = st.LookUpSeat(Sched,10);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -313,7 +315,7 @@ public class Transportation extends Seats{
         else {
             rSeat.setText("E3");
             Seat.setText("E3");
-            status = LookUpSeat(Sched,11);
+            status = st.LookUpSeat(Sched,11);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -334,7 +336,7 @@ public class Transportation extends Seats{
         else {
             rSeat.setText("F4");
             Seat.setText("F4");
-            status = LookUpSeat(Sched,12);
+            status = st.LookUpSeat(Sched,12);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -346,13 +348,14 @@ public class Transportation extends Seats{
         }
     }
 
+    Receipt r = new Receipt();
 
     @FXML
     private void Confirm(){
         int status;
-        int number = (int) (100000 + Math.random()*(999-100)-100);
+        int number = r.TransactionNumber();
         String res = Integer.toString(number);
-        status = seatSelect(Sched,SeatSelected);
+        status = st.seatSelect(Sched,SeatSelected);
         if(SeatSelected != 0) {
             if ((status == 1)) {
                 rPrompt.setText("Reservation Successful!");

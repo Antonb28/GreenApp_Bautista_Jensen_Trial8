@@ -31,4 +31,9 @@ public class FoodMenu {
     private void GoodMunch() throws IOException {
         App.setRoot("GoodMunch");
     }
+
+    @FXML
+    private void User() throws IOException{
+        App.setRoot("UserDetails");
+    }
 }

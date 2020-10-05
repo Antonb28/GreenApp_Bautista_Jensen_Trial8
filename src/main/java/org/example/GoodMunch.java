@@ -5,7 +5,8 @@ import org.example.App;
 
 import java.io.IOException;
 
-public class GoodMunch {
+public class GoodMunch implements CheckOut{
+
     int total =0, input, change;
     int item;
     int [] itemarray = new int[9];
@@ -13,6 +14,9 @@ public class GoodMunch {
 
     @FXML
     private Label Message;
+
+    @FXML
+    private Label orderNum;
 
     @FXML
     private TextField qBeefsalpicao;
@@ -286,8 +290,13 @@ public class GoodMunch {
 
     }
 
+    Receipt r = new Receipt();
+
     @FXML
-    private void Payment(){
+    @Override
+    public void Payment(){
+        int number = r.TransactionNumber();
+        String res = Integer.toString(number);
         String pay = Payment.getText();
         if (input < total){
             input = Integer.parseInt(String.valueOf(pay));
@@ -296,7 +305,8 @@ public class GoodMunch {
         if(input >= total){
             change = input - total;
             Change.setText("Php " + change);
-            Message.setVisible(false);
+            Message.setText("Order Sucessful");
+            orderNum.setText(res);
         }
     }
 
