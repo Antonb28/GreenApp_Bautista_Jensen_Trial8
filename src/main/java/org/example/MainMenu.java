@@ -49,6 +49,11 @@ public class MainMenu {
     }
 
     @FXML
+    private void User() throws IOException{
+        App.setRoot("UserDetails");
+    }
+
+    @FXML
     private void FoodDetect() throws IOException{
         FClick.setOpacity(.30);
     }

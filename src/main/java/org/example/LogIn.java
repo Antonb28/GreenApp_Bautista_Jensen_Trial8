@@ -19,7 +19,7 @@ public class LogIn{
 
     @FXML
     private void LogIn() throws IOException {
-        Users us = new Users();
+        User us = new User();
 
         String User, Pass;
         int action;

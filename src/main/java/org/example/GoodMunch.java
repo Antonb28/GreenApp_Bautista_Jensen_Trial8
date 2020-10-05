@@ -1,4 +1,4 @@
-package org.openjfx;
+package org.example;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import org.example.App;

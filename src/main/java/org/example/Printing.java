@@ -120,6 +120,9 @@ public class Printing {
     }
 
     @FXML
+    Label timePrompt;
+
+    @FXML
     private void inputTime() throws IOException{
         ToggleGroup Time = new ToggleGroup();
         AM.setToggleGroup(Time);
@@ -128,10 +131,19 @@ public class Printing {
         String hr = hour.getText();
         String mn = minute.getText();
 
+        int hour = Integer.parseInt(String.valueOf(hr));
+        int minute = Integer.parseInt(String.valueOf(mn));
+
         if(AM.isSelected()){
+            if((hour > 12)||(minute> 59)||(hour < 0)||(minute < 0)){
+                timePrompt.setText("INVALID TIME");
+            }
             rTime.setText(hr+":"+mn+" AM");
         }
         else if(PM.isSelected()){
+            if((hour > 12)||(minute> 59)||(hour < 0)||(minute < 0)){
+                timePrompt.setText("INVALID TIME");
+            }
             rTime.setText(hr+":"+mn+" PM");
         }
     }

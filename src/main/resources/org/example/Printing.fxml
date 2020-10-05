@@ -175,16 +175,16 @@
          <font>
             <Font size="11.0" />
          </font></Button>
-      <TextField fx:id="hour" layoutX="294.0" layoutY="457.0" prefHeight="27.0" prefWidth="28.0" />
+      <TextField fx:id="hour" layoutX="294.0" layoutY="451.0" prefHeight="27.0" prefWidth="28.0" />
       <Label alignment="CENTER" layoutX="325.0" layoutY="451.0" prefHeight="27.0" prefWidth="10.0" text=":">
          <font>
             <Font name="Arial Bold" size="27.0" />
          </font>
       </Label>
-      <TextField fx:id="minute" layoutX="337.0" layoutY="457.0" prefHeight="27.0" prefWidth="42.0" />
-      <RadioButton fx:id="AM" layoutX="402.0" layoutY="461.0" mnemonicParsing="false" onAction="#inputTime" text="AM" />
-      <RadioButton fx:id="PM" layoutX="466.0" layoutY="461.0" mnemonicParsing="false" onAction="#inputTime" text="PM" />
-      <Label fx:id="SelectPrompt1" alignment="CENTER" layoutX="272.0" layoutY="471.0" prefHeight="21.0" prefWidth="251.0" textFill="#eb6969">
+      <TextField fx:id="minute" layoutX="337.0" layoutY="451.0" prefHeight="27.0" prefWidth="42.0" />
+      <RadioButton fx:id="AM" layoutX="402.0" layoutY="454.0" mnemonicParsing="false" onAction="#inputTime" text="AM" />
+      <RadioButton fx:id="PM" layoutX="466.0" layoutY="454.0" mnemonicParsing="false" onAction="#inputTime" text="PM" />
+      <Label fx:id="timePrompt" alignment="CENTER" layoutX="272.0" layoutY="477.0" prefHeight="21.0" prefWidth="251.0" textFill="#eb6969">
          <font>
             <Font name="Arial Bold" size="13.0" />
          </font>

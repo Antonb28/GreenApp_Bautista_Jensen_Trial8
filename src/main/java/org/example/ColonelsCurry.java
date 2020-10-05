@@ -1,13 +1,10 @@
-package org.openjfx;
-import javafx.event.ActionEvent;
+package org.example;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import org.example.App;
+
 
 import java.io.IOException;
 
@@ -43,6 +40,9 @@ public class ColonelsCurry {
 
     @FXML
     private Label Total;
+
+    @FXML
+    private Label orderNum;
 
 
     @FXML
@@ -94,6 +94,8 @@ public class ColonelsCurry {
 
     @FXML
     private void Payment(){
+        int number = (int) (100000 + Math.random()*(999-100)-100);
+        String res = Integer.toString(number);
         String pay = Payment.getText();
         if (input < total){
             input = Integer.parseInt(String.valueOf(pay));
@@ -102,7 +104,8 @@ public class ColonelsCurry {
         if(input >= total){
             change = input - total;
             Change.setText("Php " + change);
-            Message.setVisible(false);
+            Message.setText("Order Sucessful");
+            orderNum.setText(res);
         }
     }
 

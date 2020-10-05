@@ -7,93 +7,168 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.Bacsilog">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Bacsilog">
     <children>
-        <Text layoutX="331.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ate Rica's Bacsilog" wrappingWidth="217.6953125">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="551.0" layoutX="-10.0" layoutY="-19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="290.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a3a1" height="8.0" layoutX="-8.0" layoutY="13.0" stroke="#47943f" strokeType="INSIDE" strokeWidth="0.0" width="290.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a3a1" height="8.0" layoutX="-1.0" layoutY="54.0" stroke="#47943f" strokeType="INSIDE" strokeWidth="0.0" width="290.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cd5548" height="537.0" layoutX="280.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="528.0" />
+        <Text fill="WHITE" layoutX="306.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ate Rica's Bacsilog" wrappingWidth="426.61334228515625">
             <font>
-                <Font name="Arial Bold" size="22.0" />
+                <Font name="Arial Bold" size="40.0" />
             </font>
         </Text>
-        <Button fx:id="backtomenu" layoutX="440.0" layoutY="488.0" mnemonicParsing="false" onAction="#BackToMenu" text="Back To Menu">
+        <Button fx:id="backtomenu" layoutX="308.0" layoutY="361.0" mnemonicParsing="false" onAction="#BackToMenu" prefHeight="31.0" prefWidth="168.0" text="Back To Menu">
             <font>
-                <Font name="Arial Bold" size="12.0" />
+                <Font name="System Bold" size="12.0" />
             </font></Button>
-        <Button fx:id="finishorder" layoutX="311.0" layoutY="488.0" mnemonicParsing="false" onAction="#Payment" text="Finish Ordering">
-            <font>
-                <Font name="Arial Bold" size="12.0" />
-            </font>
-        </Button>
-        <GridPane layoutX="299.0" layoutY="39.0" prefHeight="431.0" prefWidth="499.0">
-            <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            </columnConstraints>
-            <rowConstraints>
-                <RowConstraints />
-                <RowConstraints maxHeight="41.0" minHeight="9.0" prefHeight="29.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="47.0" minHeight="0.0" prefHeight="28.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="64.0" minHeight="1.0" prefHeight="31.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="82.0" minHeight="4.0" prefHeight="29.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="81.0" minHeight="5.0" prefHeight="31.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="90.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="90.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="98.0" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="91.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="89.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="89.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="81.0" minHeight="0.0" prefHeight="34.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="86.0" minHeight="0.0" prefHeight="24.0" vgrow="SOMETIMES" />
-            </rowConstraints>
-            <children>
-                <CheckBox fx:id="Tapsilog" layoutX="10.0" layoutY="31.0" mnemonicParsing="false" onAction="#OrderTapsilog" prefHeight="12.0" prefWidth="243.0" text="Tapsilog (Php 74)" GridPane.rowIndex="2" />
-                <CheckBox fx:id="Footsilog" layoutX="10.0" layoutY="68.0" mnemonicParsing="false" onAction="#OrderFootsilog" prefHeight="19.0" prefWidth="244.0" text="Footsilog (Php 74)" GridPane.rowIndex="3" />
-                <CheckBox fx:id="Nuggetsilog" layoutX="10.0" layoutY="112.0" mnemonicParsing="false" onAction="#OrderNuggetsilog" prefHeight="17.0" prefWidth="242.0" text="Nuggetsilog (Php 74)" GridPane.rowIndex="4" />
-                <CheckBox fx:id="Tocilog" layoutX="10.0" layoutY="124.0" mnemonicParsing="false" onAction="#OrderTocilog" prefHeight="17.0" prefWidth="242.0" text="Tocilog (Php 74)" GridPane.rowIndex="5" />
-                <CheckBox fx:id="Cornedsilog" mnemonicParsing="false" onAction="#OrderCornedsilog" prefHeight="17.0" prefWidth="242.0" text="Cornedsilog (Php 74)" GridPane.rowIndex="7" />
-                <CheckBox fx:id="Bacsilog" mnemonicParsing="false" onAction="#OrderBacsilog" prefHeight="17.0" prefWidth="242.0" text="Bacsilog (Php 74)" GridPane.rowIndex="1" />
-                <CheckBox fx:id="BaconOmelette" mnemonicParsing="false" onAction="#OrderBaconOmelette" prefHeight="17.0" prefWidth="242.0" text="Bacon Omelette (Php 89)" GridPane.rowIndex="8" />
-                <CheckBox fx:id="TapaOmelette" mnemonicParsing="false" onAction="#OrderTapaOmelette" prefHeight="17.0" prefWidth="242.0" text="Tapa Omelette (Php 89)" GridPane.rowIndex="9" />
-                <CheckBox fx:id="FootlongOmelette" mnemonicParsing="false" onAction="#OrderFootlongOmelette" prefHeight="17.0" prefWidth="242.0" text="Footlong Omelette (Php 89)" GridPane.rowIndex="10" />
-                <CheckBox fx:id="NuggetsOmelette" mnemonicParsing="false" onAction="#OrderNuggetsOmelette" prefHeight="13.0" prefWidth="235.0" text="Nuggets Omelette (Php 89)" GridPane.rowIndex="11" />
-                <CheckBox fx:id="TocinoOmelette" layoutX="10.0" layoutY="197.0" mnemonicParsing="false" onAction="#OrderTocinoOmelette" prefHeight="13.0" prefWidth="235.0" text="Tocino Omelette (Php 89)" GridPane.rowIndex="12" />
-                <CheckBox fx:id="HotdogOmelette" mnemonicParsing="false" onAction="#OrderHotdogOmelette" prefHeight="13.0" prefWidth="235.0" text="Hotdog Omelette (Php 89)" GridPane.rowIndex="13" />
-                <CheckBox fx:id="CornedbeefOmelette" mnemonicParsing="false" onAction="#OrderCornedbeefOmelette" prefHeight="13.0" prefWidth="235.0" text="Cornedbeef Omelette (Php 89)" GridPane.rowIndex="14" />
-                <TextField fx:id="qBacsilog" prefHeight="25.0" prefWidth="97.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <TextField fx:id="qTapsilog" layoutX="260.0" layoutY="7.0" prefHeight="25.0" prefWidth="97.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <TextField fx:id="qFootsilog" layoutX="260.0" layoutY="46.0" prefHeight="25.0" prefWidth="97.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <TextField fx:id="qNuggetsilog" layoutX="260.0" layoutY="70.0" prefHeight="25.0" prefWidth="97.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <TextField fx:id="qCornedsilog" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                <TextField fx:id="qBaconOmelette" layoutX="260.0" layoutY="176.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                <TextField fx:id="qTapaOmelette" layoutX="260.0" layoutY="198.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                <TextField fx:id="qFootlongOmelette" layoutX="260.0" layoutY="221.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-                <TextField fx:id="qNuggetsOmelette" layoutX="260.0" layoutY="244.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-                <TextField fx:id="qTocinoOmelette" layoutX="260.0" layoutY="267.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
-                <TextField fx:id="qHotdogOmelette" layoutX="260.0" layoutY="291.0" prefHeight="18.0" prefWidth="241.0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
-                <TextField fx:id="qCornedbeefOmelette" layoutX="260.0" layoutY="315.0" GridPane.columnIndex="1" GridPane.rowIndex="14" />
-                <TextField fx:id="qTocilog" layoutX="260.0" layoutY="146.0" prefHeight="25.0" prefWidth="97.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                <TextField fx:id="qHotsilog" prefHeight="25.0" prefWidth="97.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                <CheckBox fx:id="Hotsilog" mnemonicParsing="false" onAction="#OrderHotsilog" prefHeight="17.0" prefWidth="242.0" text="Hotsilog (Php 74)" GridPane.rowIndex="6" />
-            </children>
-        </GridPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#393939" height="69.0" layoutX="301.0" layoutY="279.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="182.0" />
         <ImageView fitHeight="98.0" fitWidth="121.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../assets/Bacsilog.png" />
             </image>
         </ImageView>
-        <ListView fx:id="list" layoutX="8.0" layoutY="111.0" prefHeight="347.0" prefWidth="257.0" />
-        <Label fx:id="Total" layoutX="14.0" layoutY="441.0" prefHeight="17.0" prefWidth="199.0" text="Total:" />
-        <Label layoutX="28.0" layoutY="470.0" text="Payment:" />
-        <TextField fx:id="Payment" layoutX="89.0" layoutY="466.0" onAction="#Payment" prefHeight="25.0" prefWidth="49.0" />
-        <Label layoutX="28.0" layoutY="491.0" prefHeight="17.0" prefWidth="49.0" text="Change:" />
-        <Label fx:id="Change" layoutX="77.0" layoutY="491.0" prefHeight="17.0" prefWidth="49.0" />
-        <Label fx:id="Message" layoutX="146.0" layoutY="470.0" prefHeight="25.0" prefWidth="122.0" />
+        <ListView fx:id="list" layoutX="11.0" layoutY="76.0" prefHeight="309.0" prefWidth="257.0" />
+        <Label fx:id="Total" layoutX="12.0" layoutY="395.0" prefHeight="17.0" prefWidth="199.0" text="Total:">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+        <Label layoutX="12.0" layoutY="425.0" text="Payment:">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+        <TextField fx:id="Payment" layoutX="102.0" layoutY="423.0" onAction="#Payment" prefHeight="27.0" prefWidth="122.0" />
+        <Label layoutX="12.0" layoutY="455.0" prefHeight="17.0" prefWidth="199.0" text="Change:">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+        <Label fx:id="Change" layoutX="100.0" layoutY="456.0" prefHeight="21.0" prefWidth="73.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+        <Label fx:id="Message" alignment="CENTER" layoutX="27.0" layoutY="490.0" prefHeight="25.0" prefWidth="220.0" textFill="#ff6464">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="429.0" layoutX="496.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="301.0" />
+          <CheckBox fx:id="Bacsilog" layoutX="584.0" layoutY="119.0" mnemonicParsing="false" onAction="#OrderBacsilog" prefHeight="17.0" prefWidth="242.0" text="Bacsilog (Php 74)" />
+          <CheckBox fx:id="Tapsilog" layoutX="584.0" layoutY="146.0" mnemonicParsing="false" onAction="#OrderTapsilog" prefHeight="12.0" prefWidth="243.0" text="Tapsilog (Php 74)" />
+          <CheckBox fx:id="Footsilog" layoutX="584.0" layoutY="173.0" mnemonicParsing="false" onAction="#OrderFootsilog" prefHeight="19.0" prefWidth="244.0" text="Footsilog (Php 74)" />
+          <CheckBox fx:id="Nuggetsilog" layoutX="584.0" layoutY="202.0" mnemonicParsing="false" onAction="#OrderNuggetsilog" prefHeight="17.0" prefWidth="242.0" text="Nuggetsilog (Php 74)" />
+          <CheckBox fx:id="Tocilog" layoutX="584.0" layoutY="231.0" mnemonicParsing="false" onAction="#OrderTocilog" prefHeight="17.0" prefWidth="242.0" text="Tocilog (Php 74)" />
+          <CheckBox fx:id="Hotsilog" layoutX="584.0" layoutY="259.0" mnemonicParsing="false" onAction="#OrderHotsilog" prefHeight="17.0" prefWidth="242.0" text="Hotsilog (Php 74)" />
+          <CheckBox fx:id="Cornedsilog" layoutX="583.0" layoutY="287.0" mnemonicParsing="false" onAction="#OrderCornedsilog" prefHeight="17.0" prefWidth="242.0" text="Cornedsilog (Php 74)" />
+          <CheckBox fx:id="BaconOmelette" layoutX="584.0" layoutY="318.0" mnemonicParsing="false" onAction="#OrderBaconOmelette" prefHeight="17.0" prefWidth="242.0" text="Bacon Omelette (Php 89)" />
+          <CheckBox fx:id="TapaOmelette" layoutX="584.0" layoutY="346.0" mnemonicParsing="false" onAction="#OrderTapaOmelette" prefHeight="17.0" prefWidth="242.0" text="Tapa Omelette (Php 89)" />
+          <CheckBox fx:id="FootlongOmelette" layoutX="584.0" layoutY="373.0" mnemonicParsing="false" onAction="#OrderFootlongOmelette" prefHeight="17.0" prefWidth="242.0" text="Footlong Omelette (Php 89)" />
+          <CheckBox fx:id="NuggetsOmelette" layoutX="584.0" layoutY="402.0" mnemonicParsing="false" onAction="#OrderNuggetsOmelette" prefHeight="13.0" prefWidth="235.0" text="Nuggets Omelette (Php 89)" />
+          <CheckBox fx:id="TocinoOmelette" layoutX="584.0" layoutY="431.0" mnemonicParsing="false" onAction="#OrderTocinoOmelette" prefHeight="13.0" prefWidth="235.0" text="Tocino Omelette (Php 89)" />
+          <CheckBox fx:id="HotdogOmelette" layoutX="584.0" layoutY="459.0" mnemonicParsing="false" onAction="#OrderHotdogOmelette" prefHeight="13.0" prefWidth="235.0" text="Hotdog Omelette (Php 89)" />
+          <CheckBox fx:id="CornedbeefOmelette" layoutX="585.0" layoutY="487.0" mnemonicParsing="false" onAction="#OrderCornedbeefOmelette" prefHeight="13.0" prefWidth="235.0" text="Cornedbeef Omelette (Php 89)" />
+          <TextField fx:id="qBacsilog" layoutX="508.0" layoutY="116.0" prefHeight="17.0" prefWidth="61.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="qTapsilog" layoutX="508.0" layoutY="144.0" prefHeight="17.0" prefWidth="61.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="qFootsilog" layoutX="508.0" layoutY="172.0" prefHeight="17.0" prefWidth="61.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="qNuggetsilog" layoutX="508.0" layoutY="200.0" prefHeight="17.0" prefWidth="61.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="qTocilog" layoutX="508.0" layoutY="227.0" prefHeight="17.0" prefWidth="61.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="qHotsilog" layoutX="508.0" layoutY="257.0" prefHeight="17.0" prefWidth="61.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="qCornedsilog" layoutX="508.0" layoutY="285.0" prefHeight="17.0" prefWidth="61.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="qBaconOmelette" layoutX="508.0" layoutY="316.0" prefHeight="17.0" prefWidth="61.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="qTapaOmelette" layoutX="508.0" layoutY="344.0" prefHeight="17.0" prefWidth="61.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="qFootlongOmelette" layoutX="508.0" layoutY="372.0" prefHeight="17.0" prefWidth="61.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="qNuggetsOmelette" layoutX="508.0" layoutY="400.0" prefHeight="17.0" prefWidth="61.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="qTocinoOmelette" layoutX="508.0" layoutY="429.0" prefHeight="17.0" prefWidth="61.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="qHotdogOmelette" layoutX="508.0" layoutY="457.0" prefHeight="17.0" prefWidth="61.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="qCornedbeefOmelette" layoutX="508.0" layoutY="485.0" prefHeight="17.0" prefWidth="61.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <Text layoutX="-2.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receipt" textAlignment="CENTER" wrappingWidth="278.79224729537964">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="11.0" layoutX="299.0" layoutY="62.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="499.0" />
+      <Label layoutX="512.0" layoutY="91.0" text="Quantity">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="618.0" layoutY="92.0" text="Menu">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="186.0" fitWidth="182.0" layoutX="301.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/52e0bf_07f854d8165a4936b5794c55e3e4e1f6_mv2_d_1500_1500_s_2.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#7eb271" layoutX="294.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Number:" textAlignment="CENTER" wrappingWidth="196.21408234265624">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Text>
+      <Label fx:id="orderNum" alignment="CENTER" layoutX="300.0" layoutY="318.0" prefHeight="17.0" prefWidth="182.0" text="--" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font></Label>
     </children>
 </Pane>

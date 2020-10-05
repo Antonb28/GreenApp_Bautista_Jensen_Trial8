@@ -1,41 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.ColonelsCurry">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ColonelsCurry">
    <children>
-      <Button fx:id="backtomenu" layoutX="440.0" layoutY="429.0" mnemonicParsing="false" onAction="#BackToMenu" text="Back To Menu">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="551.0" layoutY="-9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="290.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a3a1" height="8.0" layoutX="-5.0" layoutY="64.0" stroke="#47943f" strokeType="INSIDE" strokeWidth="0.0" width="301.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a3a1" height="8.0" layoutX="-1.0" layoutY="23.0" stroke="#47943f" strokeType="INSIDE" strokeWidth="0.0" width="301.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c39860" height="551.0" layoutX="290.0" layoutY="-8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="518.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="179.0" layoutX="496.0" layoutY="263.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="301.0" />
+      <CheckBox fx:id="Gyoza" layoutX="518.0" layoutY="375.0" mnemonicParsing="false" onAction="#OrderGyoza" text="Pan-Seared Gyoza (5 pcs) (Php 150)" />
+      <CheckBox fx:id="Curry" layoutX="518.0" layoutY="310.0" mnemonicParsing="false" onAction="#OrderCurry" prefHeight="18.0" prefWidth="257.0" text="Premium Japanese Curry Bento (Php 260)" />
+      <TextField fx:id="qCurry" layoutX="573.0" layoutY="337.0" prefHeight="24.0" prefWidth="58.0" />
+      <TextField fx:id="qGyoza" layoutX="571.0" layoutY="396.0" prefHeight="27.0" prefWidth="59.0" />
+      <ImageView fitHeight="98.0" fitWidth="121.0" layoutX="24.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/Bacsilog.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="list" layoutX="21.0" layoutY="86.0" prefHeight="309.0" prefWidth="257.0" />
+      <Label fx:id="Total" layoutX="22.0" layoutY="405.0" prefHeight="17.0" prefWidth="199.0" text="Total:">
          <font>
-            <Font name="Arial Bold" size="12.0" />
+            <Font name="Arial Bold" size="18.0" />
          </font>
-      </Button>
-      <Text layoutX="314.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Colonel's Curry" wrappingWidth="301.359375">
+      </Label>
+      <Label layoutX="22.0" layoutY="435.0" text="Payment:">
          <font>
-            <Font name="Arial Bold" size="32.0" />
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Payment" layoutX="112.0" layoutY="433.0" onAction="#Payment" prefHeight="27.0" prefWidth="122.0" />
+      <Label fx:id="Change" layoutX="22.0" layoutY="465.0" prefHeight="17.0" prefWidth="199.0" text="Change:">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Message" alignment="CENTER" layoutX="37.0" layoutY="500.0" prefHeight="25.0" prefWidth="220.0" textFill="#ff6464">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Text layoutX="8.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receipt" textAlignment="CENTER" wrappingWidth="278.79224729537964">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
          </font>
       </Text>
-      <Button fx:id="finishorder" layoutX="314.0" layoutY="429.0" mnemonicParsing="false" onAction="#Payment" text="Finish Ordering">
+      <Text fill="WHITE" layoutX="306.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Colonel's Curry" wrappingWidth="426.61334228515625">
          <font>
-            <Font name="Arial Bold" size="12.0" />
+            <Font name="Arial Bold" size="40.0" />
+         </font>
+      </Text>
+      <Button fx:id="backtomenu1" layoutX="308.0" layoutY="345.0" mnemonicParsing="false" onAction="#BackToMenu" prefHeight="31.0" prefWidth="168.0" text="Back To Menu">
+         <font>
+            <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <ImageView fx:id="imageview" fitHeight="131.0" fitWidth="165.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#393939" height="69.0" layoutX="301.0" layoutY="263.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="182.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="11.0" layoutX="299.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="499.0" />
+      <Text fill="#7eb271" layoutX="294.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Number:" textAlignment="CENTER" wrappingWidth="196.21408234265624">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Text>
+      <Label fx:id="orderNum" alignment="CENTER" layoutX="300.0" layoutY="302.0" prefHeight="17.0" prefWidth="182.0" text="--" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="517.0" layoutY="342.0" text="Quantity">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="512.0" layoutY="278.0" text="Menu">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="518.0" layoutY="402.0" text="Quantity">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="472.0" layoutX="330.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../assets/ColonelsCurry.jpg" />
-         </image></ImageView>
-      <ListView fx:id="list" layoutX="22.0" layoutY="159.0" prefHeight="251.0" prefWidth="220.0" />
-      <Label fx:id="Total" layoutX="31.0" layoutY="386.0" prefHeight="17.0" prefWidth="198.0" text="Total:" />
-      <Label layoutX="18.0" layoutY="421.0" prefHeight="17.0" prefWidth="81.0" text="Your Payment:" />
-      <TextField fx:id="Payment" layoutX="108.0" layoutY="417.0" prefHeight="25.0" prefWidth="44.0" />
-      <Label layoutX="22.0" layoutY="444.0" prefHeight="17.0" prefWidth="44.0" text="Change:" />
-      <Label fx:id="Change" layoutX="71.0" layoutY="444.0" prefHeight="17.0" prefWidth="67.0" />
-      <CheckBox fx:id="Gyoza" layoutX="255.0" layoutY="199.0" mnemonicParsing="false" onAction="#OrderGyoza" text="Pan-Seared Gyoza (5 pcs) (Php 150)" />
-      <CheckBox fx:id="Curry" layoutX="255.0" layoutY="165.0" mnemonicParsing="false" onAction="#OrderCurry" text="Premium Japanese Curry Bento (Php 260)" />
-      <TextField fx:id="qCurry" layoutX="514.0" layoutY="161.0" prefHeight="25.0" prefWidth="38.0" />
-      <TextField fx:id="qGyoza" layoutX="514.0" layoutY="195.0" prefHeight="25.0" prefWidth="38.0" />
-      <Label fx:id="Message" layoutX="161.0" layoutY="418.0" prefHeight="23.0" prefWidth="131.0" />
+            <Image url="@../../assets/Screen%20Shot%202020-09-24%20at%209.02.00%20PM.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="301.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/Colonels%20Curry.jpg" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

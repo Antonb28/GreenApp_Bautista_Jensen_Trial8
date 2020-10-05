@@ -1,4 +1,4 @@
-package org.openjfx;
+package org.example;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
@@ -107,6 +107,9 @@ public class Bacsilog {
 
     @FXML
     private Label Change;
+
+    @FXML
+    private Label orderNum;
 
     @FXML
     private void OrderBacsilog(){
@@ -418,6 +421,8 @@ public class Bacsilog {
 
     @FXML
     private void Payment(){
+        int number = (int) (100000 + Math.random()*(999-100)-100);
+        String res = Integer.toString(number);
         String pay = Payment.getText();
         if (input < total){
             input = Integer.parseInt(String.valueOf(pay));
@@ -426,7 +431,8 @@ public class Bacsilog {
         if(input >= total){
             change = input - total;
             Change.setText("Php " + change);
-            Message.setVisible(false);
+            Message.setText("Order Sucessful");
+            orderNum.setText(res);
         }
     }
 }

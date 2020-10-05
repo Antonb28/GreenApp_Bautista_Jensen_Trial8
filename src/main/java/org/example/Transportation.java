@@ -9,7 +9,7 @@ import javafx.scene.control.ToggleGroup;
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class Transportation{
+public class Transportation extends Seats{
     @FXML
     RadioButton DtoA;
     @FXML
@@ -63,7 +63,6 @@ public class Transportation{
 
     public int Sched;
     public int SeatSelected;
-    Seats av = new Seats();
 
     @FXML
     private void DtoA() throws IOException {
@@ -104,7 +103,7 @@ public class Transportation{
         else {
                 rSeat.setText("A1");
                 Seat.setText("A1");
-                status = av.LookUpSeat(Sched,1);
+                status = LookUpSeat(Sched,1);
                 if(status == 1){
                     SeatStat.setText("SEAT TAKEN");
                     SeatSelected = 0;
@@ -125,7 +124,7 @@ public class Transportation{
         else {
             rSeat.setText("B2");
             Seat.setText("B2");
-            status = av.LookUpSeat(Sched,2);
+            status = LookUpSeat(Sched,2);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -146,7 +145,7 @@ public class Transportation{
         else {
             rSeat.setText("C1");
             Seat.setText("C1");
-            status = av.LookUpSeat(Sched,3);
+            status = LookUpSeat(Sched,3);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -167,7 +166,7 @@ public class Transportation{
         else {
             rSeat.setText("D2");
             Seat.setText("D2");
-            status = av.LookUpSeat(Sched,4);
+            status = LookUpSeat(Sched,4);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -188,7 +187,7 @@ public class Transportation{
         else {
             rSeat.setText("E1");
             Seat.setText("E1");
-            status = av.LookUpSeat(Sched,5);
+            status = LookUpSeat(Sched,5);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -209,7 +208,7 @@ public class Transportation{
         else {
             rSeat.setText("F2");
             Seat.setText("F2");
-            status = av.LookUpSeat(Sched,6);
+            status = LookUpSeat(Sched,6);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -230,7 +229,7 @@ public class Transportation{
         else {
             rSeat.setText("A3");
             Seat.setText("A3");
-            status = av.LookUpSeat(Sched,7);
+            status = LookUpSeat(Sched,7);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -251,7 +250,7 @@ public class Transportation{
         else {
             rSeat.setText("B4");
             Seat.setText("B4");
-            status = av.LookUpSeat(Sched,8);
+            status = LookUpSeat(Sched,8);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -272,7 +271,7 @@ public class Transportation{
         else {
             rSeat.setText("C3");
             Seat.setText("C3");
-            status = av.LookUpSeat(Sched,9);
+            status = LookUpSeat(Sched,9);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -293,7 +292,7 @@ public class Transportation{
         else {
             rSeat.setText("D4");
             Seat.setText("D4");
-            status = av.LookUpSeat(Sched,10);
+            status = LookUpSeat(Sched,10);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -314,7 +313,7 @@ public class Transportation{
         else {
             rSeat.setText("E3");
             Seat.setText("E3");
-            status = av.LookUpSeat(Sched,11);
+            status = LookUpSeat(Sched,11);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -335,7 +334,7 @@ public class Transportation{
         else {
             rSeat.setText("F4");
             Seat.setText("F4");
-            status = av.LookUpSeat(Sched,12);
+            status = LookUpSeat(Sched,12);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 SeatSelected = 0;
@@ -353,7 +352,7 @@ public class Transportation{
         int status;
         int number = (int) (100000 + Math.random()*(999-100)-100);
         String res = Integer.toString(number);
-        status = av.seatSelect(Sched,SeatSelected);
+        status = seatSelect(Sched,SeatSelected);
         if(SeatSelected != 0) {
             if ((status == 1)) {
                 rPrompt.setText("Reservation Successful!");
@@ -368,6 +367,22 @@ public class Transportation{
     @FXML
     private void Back() throws IOException {
         App.setRoot("MainMenu");
+    }
+
+    @FXML
+    private void reset(){
+        DtoA.setSelected(false);
+        Time1.setSelected(false);
+        Time2.setSelected(false);
+        Time1.setText("--:--");
+        Time2.setText("--:--");
+        rRoute.setText("----");
+        rNumber.setText("----");
+        rTime.setText("----");
+        rSeat.setText("----");
+        rPrompt.setText(" ");
+        SeatStat.setText(" ");
+        Seat.setText(" ");
     }
 
     }

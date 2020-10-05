@@ -66,7 +66,7 @@
                 <Font size="11.0" />
             </font>
         </RadioButton>
-        <Button fx:id="back" layoutX="40.0" layoutY="474.0" mnemonicParsing="false" onAction="#Back" prefHeight="31.0" prefWidth="168.0" text="Back to Menu" />
+        <Button fx:id="back" layoutX="22.0" layoutY="474.0" mnemonicParsing="false" onAction="#Back" prefHeight="31.0" prefWidth="129.0" text="Back to Menu" />
         <Label fx:id="rPrompt" alignment="CENTER" layoutX="-1.0" layoutY="443.0" prefHeight="25.0" prefWidth="242.0" textFill="#ff4a4a">
             <font>
                 <Font name="Arial Bold" size="15.0" />
@@ -220,5 +220,6 @@
             <Font name="Arial Bold" size="10.0" />
          </font>
       </Label>
+      <Button layoutX="165.0" layoutY="474.0" mnemonicParsing="false" onAction="#reset" prefHeight="31.0" prefWidth="54.0" text="Reset" />
     </children>
 </Pane>
