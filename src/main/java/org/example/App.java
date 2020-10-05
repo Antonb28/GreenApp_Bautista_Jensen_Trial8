@@ -8,6 +8,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/** Accounts:
+ *  User: antonio_bautista@dlsu.edu.ph
+ *  Pass: AntonB28
+ *
+ *  User: john_anthony_jose@dlsu.edu.ph
+ *  Pass: SirJose_10xPogi
+ *
+ *  User: jeremiah_jensen@dlsu.edu.ph
+ *  Pass: MrGarvinHaHa
+ */
+
 /**
  * JavaFX App
  */

@@ -17,8 +17,8 @@
             <Image url="@../../assets/blogRoll201641164340628_1-s0F0i9hHCwc756pbaYCWrQ.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#47943f" height="608.0" layoutX="-6.0" layoutY="-33.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="248.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070707" height="280.0" layoutX="276.0" layoutY="105.0" opacity="0.64" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="496.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2f6829" height="572.0" layoutX="-6.0" layoutY="-33.0" opacity="0.55" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="248.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070707" height="280.0" layoutX="276.0" layoutY="105.0" opacity="0.84" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="496.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="172.0" layoutX="-6.0" layoutY="171.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="248.0" />
       <Label layoutX="21.0" layoutY="202.0" prefHeight="51.0" prefWidth="206.0" text="The Green" textFill="#66ae54">
          <font>

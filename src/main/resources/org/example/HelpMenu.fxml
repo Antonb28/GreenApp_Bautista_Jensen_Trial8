@@ -59,7 +59,7 @@
             <Image url="@../../assets/Transpo.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="Prints" fitHeight="141.0" fitWidth="512.0" layoutX="275.0" layoutY="379.0" onMouseEntered="#prDetect" onMouseExited="#prExit" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Prints" fitHeight="141.0" fitWidth="512.0" layoutX="274.0" layoutY="379.0" onMouseEntered="#prDetect" onMouseExited="#prExit" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assets/print.png" />
          </image>

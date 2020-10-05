@@ -45,7 +45,7 @@
             <Font name="Arial Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="Message" alignment="CENTER" layoutX="37.0" layoutY="500.0" prefHeight="25.0" prefWidth="220.0" textFill="#ff6464">
+      <Label fx:id="Message" alignment="CENTER" layoutX="37.0" layoutY="492.0" prefHeight="25.0" prefWidth="220.0" textFill="#ff6464">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font>
@@ -60,7 +60,7 @@
             <Font name="Arial Bold" size="40.0" />
          </font>
       </Text>
-      <Button fx:id="backtomenu1" layoutX="308.0" layoutY="345.0" mnemonicParsing="false" onAction="#BackToMenu" prefHeight="31.0" prefWidth="168.0" text="Back To Menu">
+      <Button fx:id="backtomenu1" layoutX="307.0" layoutY="460.0" mnemonicParsing="false" onAction="#BackToMenu" prefHeight="31.0" prefWidth="168.0" text="Back To Menu">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -100,6 +100,11 @@
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="301.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assets/Colonels%20Curry.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="114.0" fitWidth="182.0" layoutX="301.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/instructions.png" />
          </image>
       </ImageView>
    </children>

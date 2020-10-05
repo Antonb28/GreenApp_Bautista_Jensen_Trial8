@@ -17,13 +17,13 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="551.0" layoutX="-10.0" layoutY="-19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="290.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a3a1" height="8.0" layoutX="-8.0" layoutY="13.0" stroke="#47943f" strokeType="INSIDE" strokeWidth="0.0" width="290.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a3a1" height="8.0" layoutX="-1.0" layoutY="54.0" stroke="#47943f" strokeType="INSIDE" strokeWidth="0.0" width="290.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cd5548" height="537.0" layoutX="280.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="528.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cd5548" height="537.0" layoutX="275.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="528.0" />
         <Text fill="WHITE" layoutX="306.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ate Rica's Bacsilog" wrappingWidth="426.61334228515625">
             <font>
                 <Font name="Arial Bold" size="40.0" />
             </font>
         </Text>
-        <Button fx:id="backtomenu" layoutX="308.0" layoutY="361.0" mnemonicParsing="false" onAction="#BackToMenu" prefHeight="31.0" prefWidth="168.0" text="Back To Menu">
+        <Button fx:id="backtomenu" layoutX="307.0" layoutY="475.0" mnemonicParsing="false" onAction="#BackToMenu" prefHeight="31.0" prefWidth="168.0" text="Back To Menu">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font></Button>
@@ -170,5 +170,10 @@
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font></Label>
+      <ImageView fitHeight="114.0" fitWidth="182.0" layoutX="301.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/instructions.png" />
+         </image>
+      </ImageView>
     </children>
 </Pane>

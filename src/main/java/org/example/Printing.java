@@ -138,13 +138,25 @@ public class Printing {
             if((hour > 12)||(minute> 59)||(hour < 0)||(minute < 0)){
                 timePrompt.setText("INVALID TIME");
             }
-            rTime.setText(hr+":"+mn+" AM");
+            else if((hour>11)||(hour<7)){
+                timePrompt.setText("Time Not Available");
+            }
+            else{
+                timePrompt.setText(" ");
+                rTime.setText(hr+":"+mn+" AM");
+            }
         }
         else if(PM.isSelected()){
             if((hour > 12)||(minute> 59)||(hour < 0)||(minute < 0)){
                 timePrompt.setText("INVALID TIME");
             }
-            rTime.setText(hr+":"+mn+" PM");
+            else if((hour>6)&&(hour<12)){
+                timePrompt.setText("Time Not Available");
+            }
+            else{
+                timePrompt.setText(" ");
+                rTime.setText(hr+":"+mn+" PM");
+            }
         }
     }
 
@@ -154,6 +166,7 @@ public class Printing {
     private void confirm() throws IOException{
         int number = r.TransactionNumber();
         String res = Integer.toString(number);
+        timePrompt.setText(" ");
         ConfirmPrompt.setText("Transaction Successful!");
         ReferenceNum.setText(res);
     }

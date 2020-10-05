@@ -108,10 +108,11 @@ public class Transportation{
                 status = st.LookUpSeat(Sched,1);
                 if(status == 1){
                     SeatStat.setText("SEAT TAKEN");
-                    SeatSelected = 0;
+                    rPrompt.setText("Seat Taken");
                 }
                 else if(status == 2){
                     SeatStat.setText("AVAILABLE");
+                    rPrompt.setText(" ");
                     SeatSelected = 1;
                 }
             }
@@ -129,10 +130,11 @@ public class Transportation{
             status = st.LookUpSeat(Sched,2);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
-                SeatSelected = 0;
+                rPrompt.setText("Seat Taken");
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
+                rPrompt.setText(" ");
                 SeatSelected = 2;
             }
         }
@@ -150,10 +152,11 @@ public class Transportation{
             status = st.LookUpSeat(Sched,3);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
-                SeatSelected = 0;
+                rPrompt.setText("Seat Taken");
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
+                rPrompt.setText(" ");
                 SeatSelected = 3;
             }
         }
@@ -171,10 +174,11 @@ public class Transportation{
             status = st.LookUpSeat(Sched,4);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
-                SeatSelected = 0;
+                rPrompt.setText("Seat Taken");
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
+                rPrompt.setText(" ");
                 SeatSelected = 4;
             }
         }
@@ -192,10 +196,11 @@ public class Transportation{
             status = st.LookUpSeat(Sched,5);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
-                SeatSelected = 0;
+                rPrompt.setText("Seat Taken");
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
+                rPrompt.setText(" ");
                 SeatSelected = 5;
             }
         }
@@ -213,10 +218,11 @@ public class Transportation{
             status = st.LookUpSeat(Sched,6);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
-                SeatSelected = 0;
+                rPrompt.setText("Seat Taken");
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
+                rPrompt.setText(" ");
                 SeatSelected = 6;
             }
         }
@@ -234,10 +240,11 @@ public class Transportation{
             status = st.LookUpSeat(Sched,7);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
-                SeatSelected = 0;
+                rPrompt.setText("Seat Taken");
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
+                rPrompt.setText(" ");
                 SeatSelected = 7;
             }
         }
@@ -255,10 +262,11 @@ public class Transportation{
             status = st.LookUpSeat(Sched,8);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
-                SeatSelected = 0;
+                rPrompt.setText("Seat Taken");
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
+                rPrompt.setText(" ");
                 SeatSelected = 8;
             }
         }
@@ -276,10 +284,11 @@ public class Transportation{
             status = st.LookUpSeat(Sched,9);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
-                SeatSelected = 0;
+                rPrompt.setText("Seat Taken");
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
+                rPrompt.setText(" ");
                 SeatSelected = 9;
             }
         }
@@ -297,10 +306,11 @@ public class Transportation{
             status = st.LookUpSeat(Sched,10);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
-                SeatSelected = 0;
+                rPrompt.setText("Seat Taken");
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
+                rPrompt.setText(" ");
                 SeatSelected = 10;
             }
         }
@@ -318,10 +328,11 @@ public class Transportation{
             status = st.LookUpSeat(Sched,11);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
-                SeatSelected = 0;
+                rPrompt.setText("Seat Taken");
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
+                rPrompt.setText(" ");
                 SeatSelected = 11;
             }
         }
@@ -339,10 +350,11 @@ public class Transportation{
             status = st.LookUpSeat(Sched,12);
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
-                SeatSelected = 0;
+                rPrompt.setText("Seat Taken");
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
+                rPrompt.setText(" ");
                 SeatSelected = 12;
             }
         }
@@ -361,9 +373,6 @@ public class Transportation{
                 rPrompt.setText("Reservation Successful!");
                 rNumber.setText(res);
             }
-        }
-        if(SeatSelected == 0) {
-            rPrompt.setText("Reservation Failed");
         }
     }
 

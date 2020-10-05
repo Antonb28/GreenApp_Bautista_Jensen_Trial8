@@ -4,7 +4,7 @@ public class User{
 
     public int CheckUser(String User, String Pass) {
         if (User.equals("john_anthony_jose@dlsu.edu.ph")) {
-            if (Pass.equals("SirJose_10")) {
+            if (Pass.equals("SirJose_10xPogi")) {
                 return 2;
             } else {
                 return 0;
