@@ -109,6 +109,7 @@ public class Transportation{
                 if(status == 1){
                     SeatStat.setText("SEAT TAKEN");
                     rPrompt.setText("Seat Taken");
+                    SeatSelected = 0;
                 }
                 else if(status == 2){
                     SeatStat.setText("AVAILABLE");
@@ -131,6 +132,7 @@ public class Transportation{
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 rPrompt.setText("Seat Taken");
+                SeatSelected = 0;
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
@@ -153,6 +155,7 @@ public class Transportation{
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 rPrompt.setText("Seat Taken");
+                SeatSelected = 0;
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
@@ -175,6 +178,7 @@ public class Transportation{
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 rPrompt.setText("Seat Taken");
+                SeatSelected = 0;
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
@@ -197,6 +201,7 @@ public class Transportation{
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 rPrompt.setText("Seat Taken");
+                SeatSelected = 0;
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
@@ -219,6 +224,7 @@ public class Transportation{
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 rPrompt.setText("Seat Taken");
+                SeatSelected = 0;
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
@@ -241,6 +247,7 @@ public class Transportation{
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 rPrompt.setText("Seat Taken");
+                SeatSelected = 0;
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
@@ -263,6 +270,7 @@ public class Transportation{
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 rPrompt.setText("Seat Taken");
+                SeatSelected = 0;
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
@@ -285,6 +293,7 @@ public class Transportation{
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 rPrompt.setText("Seat Taken");
+                SeatSelected = 0;
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
@@ -307,6 +316,7 @@ public class Transportation{
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 rPrompt.setText("Seat Taken");
+                SeatSelected = 0;
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
@@ -329,6 +339,7 @@ public class Transportation{
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 rPrompt.setText("Seat Taken");
+                SeatSelected = 0;
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
@@ -351,6 +362,7 @@ public class Transportation{
             if(status == 1){
                 SeatStat.setText("SEAT TAKEN");
                 rPrompt.setText("Seat Taken");
+                SeatSelected = 0;
             }
             else if(status == 2){
                 SeatStat.setText("AVAILABLE");
@@ -367,12 +379,15 @@ public class Transportation{
         int status;
         int number = r.TransactionNumber();
         String res = Integer.toString(number);
-        status = st.seatSelect(Sched,SeatSelected);
-        if(SeatSelected != 0) {
+        if(SeatSelected > 0) {
+            status = st.seatSelect(Sched,SeatSelected);
             if ((status == 1)) {
                 rPrompt.setText("Reservation Successful!");
                 rNumber.setText(res);
             }
+        }
+        else if(SeatSelected == 0){
+            rPrompt.setText("Reservation Failed");
         }
     }
 

@@ -27,7 +27,7 @@ public class User{
     }
 
     public int CheckDetails(String Pass) {
-        if (Pass.equals("SirJose_10")) {
+        if (Pass.equals("SirJose_10xPogi")) {
             return 2;
         }
         else if (Pass.equals("AntonB28")) {
